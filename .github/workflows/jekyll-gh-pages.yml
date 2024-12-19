@@ -54,11 +54,9 @@
 name: Deploy Static HTML to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
@@ -88,8 +86,10 @@ jobs:
       - name: Download Custom CSS
         run: curl -o site/style.css https://ramtinmoslemi.github.io/style.css
 
-      - name: Update HTML to Link Custom CSS
-        run: sed -i '1s;^;<link rel="stylesheet" href="style.css">;' site/index.html
+      - name: Add Meta and Container Div
+        run: |
+          sed -i '1s;^;<link rel="stylesheet" href="style.css">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<div class="container">;' site/index.html
+          echo '</div>' >> site/index.html
 
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
