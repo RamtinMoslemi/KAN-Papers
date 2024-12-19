@@ -1,11 +1,17 @@
-# Kolmogorov-Arnold Networks Papers
-A complete list of papers on KANs. Papers with submission dates before the original KAN papers are excluded. You might find [this awesome list](https://github.com/mintisan/awesome-kan) useful as well.
+# Kolmogorov-Arnold Network Papers
+A complete list of papers on KANs. Papers with submission dates before the original KAN papers are excluded. 
+You might find [this awesome list](https://github.com/mintisan/awesome-kan) useful as well.
+You can find the [csv file](https://github.com/RamtinMoslemi/KAN-Papers/blob/main/kan_papers.csv) containing papers and information such as their titles, abstracts, authors, links, and dates.
 
 ## Papers by Month
- ![monthly_papers](figures/monthly_papers.svg) 
+Number of papers submitted to arXiv by month.
+
+![monthly_papers](figures/monthly_papers.svg) 
 
 ## Word Clouds
- ![word_clouds](figures/word_clouds.png) 
+Word clouds of KAN paper titles and abstracts.
+
+![word_clouds](figures/word_clouds.png) 
 
 ## Notebook
 You can play with the notebook:
