@@ -4,7 +4,7 @@ A complete list of papers on KANs. Papers with submission dates before the origi
 ## Papers by Month
 Number of papers submitted to arXiv by month.
 
-![monthly_papers](figures/monthly_papers.svg)
+![monthly_papers](figures/papers_by_month.svg)
 
 ## Word Clouds
 Word clouds of KAN paper titles and abstracts.
@@ -309,6 +309,16 @@ Hoang-Thang Ta
 
 **Abstract:**
 In this paper, we introduce BSRBF-KAN, a Kolmogorov Arnold Network (KAN) that combines B-splines and radial basis functions (RBFs) to fit input vectors during data training. We perform experiments with BSRBF-KAN, multi-layer perception (MLP), and other popular KANs, including EfficientKAN, FastKAN, FasterKAN, and GottliebKAN over the MNIST and Fashion-MNIST datasets. BSRBF-KAN shows stability in 5 training runs with a competitive average accuracy of 97.55% on MNIST and 89.33% on Fashion-MNIST and obtains convergence better than other networks. We expect BSRBF-KAN to open many combinations of mathematical functions to design KANs. Our repo is publicly available at: https://github.com/hoangthangta/BSRBF_KAN.
+       
+
+
+### [Realizability-Informed Machine Learning for Turbulence Anisotropy Mappings](https://arxiv.org/abs/2406.11603)
+
+**Authors:**
+Ryley McConkey, Nikhila Kalia, Eugene Yee, Fue-Sang Lien
+
+**Abstract:**
+Within the context of machine learning-based closure mappings for RANS turbulence modelling, physical realizability is often enforced using ad-hoc postprocessing of the predicted anisotropy tensor. In this study, we address the realizability issue via a new physics-based loss function that penalizes non-realizable results during training, thereby embedding a preference for realizable predictions into the model. Additionally, we propose a new framework for data-driven turbulence modelling which retains the stability and conditioning of optimal eddy viscosity-based approaches while embedding equivariance. Several modifications to the tensor basis neural network to enhance training and testing stability are proposed. We demonstrate the conditioning, stability, and generalization of the new framework and model architecture on three flows: flow over a flat plate, flow over periodic hills, and flow through a square duct. The realizability-informed loss function is demonstrated to significantly increase the number of realizable predictions made by the model when generalizing to a new flow configuration. Altogether, the proposed framework enables the training of stable and equivariant anisotropy mappings, with more physically realizable predictions on new data. We make our code available for use and modification by others. Moreover, as part of this study, we explore the applicability of Kolmogorov-Arnold Networks (KAN) to turbulence modeling, assessing its potential to address non-linear mappings in the anisotropy tensor predictions and demonstrating promising results for the flat plate case.
        
 
 
@@ -2122,6 +2132,46 @@ Ruichen Qiu, Yibo Miao, Shiwen Wang, Lijia Yu, Yifan Zhu, Xiao-Shan Gao
 
 **Abstract:**
 The Kolmogorov-Arnold Network (KAN) is a new network architecture known for its high accuracy in several tasks such as function fitting and PDE solving. The superior expressive capability of KAN arises from the Kolmogorov-Arnold representation theorem and learnable spline functions. However, the computation of spline functions involves multiple iterations, which renders KAN significantly slower than MLP, thereby increasing the cost associated with model training and deployment. The authors of KAN have also noted that ``the biggest bottleneck of KANs lies in its slow training. KANs are usually 10x slower than MLPs, given the same number of parameters.'' To address this issue, we propose a novel MLP-type neural network PowerMLP that employs simpler non-iterative spline function representation, offering approximately the same training time as MLP while theoretically demonstrating stronger expressive power than KAN. Furthermore, we compare the FLOPs of KAN and PowerMLP, quantifying the faster computation speed of PowerMLP. Our comprehensive experiments demonstrate that PowerMLP generally achieves higher accuracy and a training speed about 40 times faster than KAN in various tasks.
+       
+
+
+### [Granger Causality Detection with Kolmogorov-Arnold Networks](https://arxiv.org/abs/2412.15373)
+
+**Authors:**
+Hongyu Lin, Mohan Ren, Paolo Barucca, Tomaso Aste
+
+**Abstract:**
+Discovering causal relationships in time series data is central in many scientific areas, ranging from economics to climate science. Granger causality is a powerful tool for causality detection. However, its original formulation is limited by its linear form and only recently nonlinear machine-learning generalizations have been introduced. This study contributes to the definition of neural Granger causality models by investigating the application of Kolmogorov-Arnold networks (KANs) in Granger causality detection and comparing their capabilities against multilayer perceptrons (MLP). In this work, we develop a framework called Granger Causality KAN (GC-KAN) along with a tailored training approach designed specifically for Granger causality detection. We test this framework on both Vector Autoregressive (VAR) models and chaotic Lorenz-96 systems, analysing the ability of KANs to sparsify input features by identifying Granger causal relationships, providing a concise yet accurate model for Granger causality detection. Our findings show the potential of KANs to outperform MLPs in discerning interpretable Granger causal relationships, particularly for the ability of identifying sparse Granger causality patterns in high-dimensional settings, and more generally, the potential of AI in causality discovery for the dynamical laws in physical systems.
+       
+
+
+### [Scattering-Based Structural Inversion of Soft Materials via Kolmogorov-Arnold Networks](https://arxiv.org/abs/2412.15474)
+
+**Authors:**
+Chi-Huan Tung, Lijie Ding, Ming-Ching Chang, Guan-Rong Huang, Lionel Porcar, Yangyang Wang, Jan-Michael Y. Carrillo, Bobby G. Sumpter, Yuya Shinohara, Changwoo Do, Wei-Ren Chen
+
+**Abstract:**
+Small-angle scattering (SAS) techniques are indispensable tools for probing the structure of soft materials. However, traditional analytical models often face limitations in structural inversion for complex systems, primarily due to the absence of closed-form expressions of scattering functions. To address these challenges, we present a machine learning framework based on the Kolmogorov-Arnold Network (KAN) for directly extracting real-space structural information from scattering spectra in reciprocal space. This model-independent, data-driven approach provides a versatile solution for analyzing intricate configurations in soft matter. By applying the KAN to lyotropic lamellar phases and colloidal suspensions -- two representative soft matter systems -- we demonstrate its ability to accurately and efficiently resolve structural collectivity and complexity. Our findings highlight the transformative potential of machine learning in enhancing the quantitative analysis of soft materials, paving the way for robust structural inversion across diverse systems.
+       
+
+
+### [KKANs: Kurkova-Kolmogorov-Arnold Networks and Their Learning Dynamics](https://arxiv.org/abs/2412.16738)
+
+**Authors:**
+Juan Diego Toscano, Li-Lian Wang, George Em Karniadakis
+
+**Abstract:**
+Inspired by the Kolmogorov-Arnold representation theorem and Kurkova's principle of using approximate representations, we propose the Kurkova-Kolmogorov-Arnold Network (KKAN), a new two-block architecture that combines robust multi-layer perceptron (MLP) based inner functions with flexible linear combinations of basis functions as outer functions. We first prove that KKAN is a universal approximator, and then we demonstrate its versatility across scientific machine-learning applications, including function regression, physics-informed machine learning (PIML), and operator-learning frameworks. The benchmark results show that KKANs outperform MLPs and the original Kolmogorov-Arnold Networks (KANs) in function approximation and operator learning tasks and achieve performance comparable to fully optimized MLPs for PIML. To better understand the behavior of the new representation models, we analyze their geometric complexity and learning dynamics using information bottleneck theory, identifying three universal learning stages, fitting, transition, and diffusion, across all types of architectures. We find a strong correlation between geometric complexity and signal-to-noise ratio (SNR), with optimal generalization achieved during the diffusion stage. Additionally, we propose self-scaled residual-based attention weights to maintain high SNR dynamically, ensuring uniform convergence and prolonged learning.
+       
+
+
+### [An Investigation on the Potential of KAN in Speech Enhancement](https://arxiv.org/abs/2412.17778)
+
+**Authors:**
+Haoyang Li, Yuchen Hu, Chen Chen, Eng Siong Chng
+
+**Abstract:**
+High-fidelity speech enhancement often requires sophisticated modeling to capture intricate, multiscale patterns. Standard activation functions, while introducing nonlinearity, lack the flexibility to fully address this complexity. Kolmogorov-Arnold Networks (KAN), an emerging methodology that employs learnable activation functions on graph edges, present a promising alternative. This work investigates two novel KAN variants based on rational and radial basis functions for speech enhancement. We integrate the rational variant into the 1D CNN blocks of Demucs and the GRU-Transformer blocks of MP-SENet, while the radial variant is adapted to the 2D CNN-based decoders of MP-SENet. Experiments on the VoiceBank-DEMAND dataset show that replacing standard activations with KAN-based activations improves speech quality across both the time-domain and time-frequency domain methods with minimal impact on model size and FLOP, underscoring KAN's potential to improve speech enhancement models.
        
 
 
