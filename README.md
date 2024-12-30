@@ -524,7 +524,7 @@ Sepsis poses a major global health threat, accounting for millions of deaths ann
        
 
 
-### [MambaForGCN: Enhancing Long-Range Dependency with State Space Model and Kolmogorov-Arnold Networks for Aspect-Based Sentiment Analysis](https://arxiv.org/abs/2407.10347)
+### [Enhancing Long-Range Dependency with State Space Model and Kolmogorov-Arnold Networks for Aspect-Based Sentiment Analysis](https://arxiv.org/abs/2407.10347)
 
 **Authors:**
 Adamu Lawan, Juhua Pu, Haruna Yunusa, Aliyu Umar, Muhammad Lawan
@@ -1555,7 +1555,7 @@ Despite the strong performance in many computer vision tasks, Convolutional Neur
 Md Abrar Jahin, Md. Akmol Masud, M. F. Mridha, Zeyar Aung, Nilanjan Dey
 
 **Abstract:**
-Heart failure remains a major global health challenge, contributing significantly to the 17.8 million annual deaths from cardiovascular disease, highlighting the need for improved diagnostic tools. Current heart disease prediction models based on classical machine learning face limitations, including poor handling of high-dimensional, imbalanced data, limited performance on small datasets, and a lack of uncertainty quantification, while also being difficult for healthcare professionals to interpret. To address these issues, we introduce KACQ-DCNN, a novel classical-quantum hybrid dual-channel neural network that replaces traditional multilayer perceptrons and convolutional layers with Kolmogorov-Arnold Networks (KANs). This approach enhances function approximation with learnable univariate activation functions, reducing model complexity and improving generalization. The KACQ-DCNN 4-qubit 1-layered model significantly outperforms 37 benchmark models across multiple metrics, achieving an accuracy of 92.03%, a macro-average precision, recall, and F1 score of 92.00%, and an ROC-AUC score of 94.77%. Ablation studies demonstrate the synergistic benefits of combining classical and quantum components with KAN. Additionally, explainability techniques like LIME and SHAP provide feature-level insights, improving model transparency, while uncertainty quantification via conformal prediction ensures robust probability estimates. These results suggest that KACQ-DCNN offers a promising path toward more accurate, interpretable, and reliable heart disease predictions, paving the way for advancements in cardiovascular healthcare.
+Heart failure is a leading cause of global mortality, necessitating improved diagnostic strategies. Classical machine learning models struggle with challenges such as high-dimensional data, class imbalances, poor feature representations, and lack of interpretability. While quantum machine learning holds promise, current hybrid models have not fully exploited quantum advantages. In this paper, we propose the Kolmogorov-Arnold Classical-Quantum Dual-Channel Neural Network (KACQ-DCNN), a novel hybrid architecture that replaces traditional multilayer perceptrons with Kolmogorov-Arnold Networks (KANs), enabling learnable univariate activation functions. Our KACQ-DCNN 4-qubit, 1-layer model outperforms 37 benchmark models, including 16 classical and 12 quantum neural networks, achieving an accuracy of 92.03%, with macro-average precision, recall, and F1 scores of 92.00%. It also achieved a ROC-AUC of 94.77%, surpassing other models by significant margins, as validated by paired t-tests with a significance threshold of 0.0056 (after Bonferroni correction). Ablation studies highlight the synergistic effect of classical-quantum integration, improving performance by about 2% over MLP variants. Additionally, LIME and SHAP explainability techniques enhance feature interpretability, while conformal prediction provides robust uncertainty quantification. Our results demonstrate that KACQ-DCNN improves cardiovascular diagnostics by combining high accuracy with interpretability and uncertainty quantification.
        
 
 
@@ -2172,6 +2172,26 @@ Haoyang Li, Yuchen Hu, Chen Chen, Eng Siong Chng
 
 **Abstract:**
 High-fidelity speech enhancement often requires sophisticated modeling to capture intricate, multiscale patterns. Standard activation functions, while introducing nonlinearity, lack the flexibility to fully address this complexity. Kolmogorov-Arnold Networks (KAN), an emerging methodology that employs learnable activation functions on graph edges, present a promising alternative. This work investigates two novel KAN variants based on rational and radial basis functions for speech enhancement. We integrate the rational variant into the 1D CNN blocks of Demucs and the GRU-Transformer blocks of MP-SENet, while the radial variant is adapted to the 2D CNN-based decoders of MP-SENet. Experiments on the VoiceBank-DEMAND dataset show that replacing standard activations with KAN-based activations improves speech quality across both the time-domain and time-frequency domain methods with minimal impact on model size and FLOP, underscoring KAN's potential to improve speech enhancement models.
+       
+
+
+### [Zero Shot Time Series Forecasting Using Kolmogorov Arnold Networks](https://arxiv.org/abs/2412.17853)
+
+**Authors:**
+Abhiroop Bhattacharya, Nandinee Haq
+
+**Abstract:**
+Accurate energy price forecasting is crucial for participants in day-ahead energy markets, as it significantly influences their decision-making processes. While machine learning-based approaches have shown promise in enhancing these forecasts, they often remain confined to the specific markets on which they are trained, thereby limiting their adaptability to new or unseen markets. In this paper, we introduce a cross-domain adaptation model designed to forecast energy prices by learning market-invariant representations across different markets during the training phase. We propose a doubly residual N-BEATS network with Kolmogorov Arnold networks at its core for time series forecasting. These networks, grounded in the Kolmogorov-Arnold representation theorem, offer a powerful way to approximate multivariate continuous functions. The cross domain adaptation model was generated with an adversarial framework. The model's effectiveness was tested in predicting day-ahead electricity prices in a zero shot fashion. In comparison with baseline models, our proposed framework shows promising results. By leveraging the Kolmogorov-Arnold networks, our model can potentially enhance its ability to capture complex patterns in energy price data, thus improving forecast accuracy across diverse market conditions. This addition not only enriches the model's representational capacity but also contributes to a more robust and flexible forecasting tool adaptable to various energy markets.
+       
+
+
+### [ProKAN: Progressive Stacking of Kolmogorov-Arnold Networks for Efficient Liver Segmentation](https://arxiv.org/abs/2412.19713)
+
+**Authors:**
+Bhavesh Gyanchandani, Aditya Oza, Abhinav Roy
+
+**Abstract:**
+The growing need for accurate and efficient 3D identification of tumors, particularly in liver segmentation, has spurred considerable research into deep learning models. While many existing architectures offer strong performance, they often face challenges such as overfitting and excessive computational costs. An adjustable and flexible architecture that strikes a balance between time efficiency and model complexity remains an unmet requirement. In this paper, we introduce proKAN, a progressive stacking methodology for Kolmogorov-Arnold Networks (KANs) designed to address these challenges. Unlike traditional architectures, proKAN dynamically adjusts its complexity by progressively adding KAN blocks during training, based on overfitting behavior. This approach allows the network to stop growing when overfitting is detected, preventing unnecessary computational overhead while maintaining high accuracy. Additionally, proKAN utilizes KAN's learnable activation functions modeled through B-splines, which provide enhanced flexibility in learning complex relationships in 3D medical data. Our proposed architecture achieves state-of-the-art performance in liver segmentation tasks, outperforming standard Multi-Layer Perceptrons (MLPs) and fixed KAN architectures. The dynamic nature of proKAN ensures efficient training times and high accuracy without the risk of overfitting. Furthermore, proKAN provides better interpretability by allowing insight into the decision-making process through its learnable coefficients. The experimental results demonstrate a significant improvement in accuracy, Dice score, and time efficiency, making proKAN a compelling solution for 3D medical image segmentation tasks.
        
 
 
