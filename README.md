@@ -939,7 +939,7 @@ Kolmogorov-Arnold Networks (KAN) models were recently proposed and claimed to pr
 ### [Beyond KAN: Introducing KarSein for Adaptive High-Order Feature Interaction Modeling in CTR Prediction](https://arxiv.org/abs/2408.08713)
 
 **Authors:**
-Yunxiao Shi, Wujiang Xu, Mingyu Jin, Haimin Zhang, Qiang Wu, Yongfeng Zhang, Min Xu
+Yunxiao Shi, Wujiang Xu, Haimin Zhang, Qiang Wu, Yongfeng Zhang, Min Xu
 
 **Abstract:**
 Modeling feature interactions is crucial for click-through rate (CTR) prediction, particularly when it comes to high-order explicit interactions. Traditional methods struggle with this task because they often predefine a maximum interaction order, which relies heavily on prior knowledge and can limit the model's effectiveness. Additionally, modeling high-order interactions typically leads to increased computational costs. Therefore, the challenge lies in adaptively modeling high-order feature interactions while maintaining efficiency. To address this issue, we introduce Kolmogorov-Arnold Represented Sparse Efficient Interaction Network (KarSein), designed to optimize both predictive accuracy and computational efficiency. We firstly identify limitations of directly applying Kolmogorov-Arnold Networks (KAN) to CTR and then introduce KarSein to overcome these issues. It features a novel architecture that reduces the computational costs of KAN and supports embedding vectors as feature inputs. Additionally, KarSein employs guided symbolic regression to address the challenge of KAN in spontaneously learning multiplicative relationships. Extensive experiments demonstrate KarSein's superior performance, achieving significant predictive accuracy with minimal computational overhead. Furthermore, KarSein maintains strong global explainability while enabling the removal of redundant features, resulting in a sparse network structure. These advantages also position KarSein as a promising method for efficient inference.
@@ -2192,6 +2192,60 @@ Bhavesh Gyanchandani, Aditya Oza, Abhinav Roy
 
 **Abstract:**
 The growing need for accurate and efficient 3D identification of tumors, particularly in liver segmentation, has spurred considerable research into deep learning models. While many existing architectures offer strong performance, they often face challenges such as overfitting and excessive computational costs. An adjustable and flexible architecture that strikes a balance between time efficiency and model complexity remains an unmet requirement. In this paper, we introduce proKAN, a progressive stacking methodology for Kolmogorov-Arnold Networks (KANs) designed to address these challenges. Unlike traditional architectures, proKAN dynamically adjusts its complexity by progressively adding KAN blocks during training, based on overfitting behavior. This approach allows the network to stop growing when overfitting is detected, preventing unnecessary computational overhead while maintaining high accuracy. Additionally, proKAN utilizes KAN's learnable activation functions modeled through B-splines, which provide enhanced flexibility in learning complex relationships in 3D medical data. Our proposed architecture achieves state-of-the-art performance in liver segmentation tasks, outperforming standard Multi-Layer Perceptrons (MLPs) and fixed KAN architectures. The dynamic nature of proKAN ensures efficient training times and high accuracy without the risk of overfitting. Furthermore, proKAN provides better interpretability by allowing insight into the decision-making process through its learnable coefficients. The experimental results demonstrate a significant improvement in accuracy, Dice score, and time efficiency, making proKAN a compelling solution for 3D medical image segmentation tasks.
+       
+
+
+### [Advancing Parkinson's Disease Progression Prediction: Comparing Long Short-Term Memory Networks and Kolmogorov-Arnold Networks](https://arxiv.org/abs/2412.20744)
+
+**Authors:**
+Abhinav Roy, Bhavesh Gyanchandani, Aditya Oza, Abhishek Sharma
+
+**Abstract:**
+Parkinson's Disease (PD) is a degenerative neurological disorder that impairs motor and non-motor functions, significantly reducing quality of life and increasing mortality risk. Early and accurate detection of PD progression is vital for effective management and improved patient outcomes. Current diagnostic methods, however, are often costly, time-consuming, and require specialized equipment and expertise. This work proposes an innovative approach to predicting PD progression using regression methods, Long Short-Term Memory (LSTM) networks, and Kolmogorov Arnold Networks (KAN). KAN, utilizing spline-parametrized univariate functions, allows for dynamic learning of activation patterns, unlike traditional linear models.
+  The Movement Disorder Society-Sponsored Revision of the Unified Parkinson's Disease Rating Scale (MDS-UPDRS) is a comprehensive tool for evaluating PD symptoms and is commonly used to measure disease progression. Additionally, protein or peptide abnormalities are linked to PD onset and progression. Identifying these associations can aid in predicting disease progression and understanding molecular changes.
+  Comparing multiple models, including LSTM and KAN, this study aims to identify the method that delivers the highest metrics. The analysis reveals that KAN, with its dynamic learning capabilities, outperforms other approaches in predicting PD progression. This research highlights the potential of AI and machine learning in healthcare, paving the way for advanced computational models to enhance clinical predictions and improve patient care and treatment strategies in PD management.
+       
+
+
+# 2025
+## January
+### [Predicting Crack Nucleation and Propagation in Brittle Materials Using Deep Operator Networks with Diverse Trunk Architectures](https://arxiv.org/abs/2501.00016)
+
+**Authors:**
+Elham Kiyani, Manav Manav, Nikhil Kadivar, Laura De Lorenzis, George Em Karniadakis
+
+**Abstract:**
+Phase-field modeling reformulates fracture problems as energy minimization problems and enables a comprehensive characterization of the fracture process, including crack nucleation, propagation, merging, and branching, without relying on ad-hoc assumptions. However, the numerical solution of phase-field fracture problems is characterized by a high computational cost. To address this challenge, in this paper, we employ a deep neural operator (DeepONet) consisting of a branch network and a trunk network to solve brittle fracture problems. We explore three distinct approaches that vary in their trunk network configurations. In the first approach, we demonstrate the effectiveness of a two-step DeepONet, which results in a simplification of the learning task. In the second approach, we employ a physics-informed DeepONet, whereby the mathematical expression of the energy is integrated into the trunk network's loss to enforce physical consistency. The integration of physics also results in a substantially smaller data size needed for training. In the third approach, we replace the neural network in the trunk with a Kolmogorov-Arnold Network and train it without the physics loss. Using these methods, we model crack nucleation in a one-dimensional homogeneous bar under prescribed end displacements, as well as crack propagation and branching in single edge-notched specimens with varying notch lengths subjected to tensile and shear loading. We show that the networks predict the solution fields accurately, and the error in the predicted fields is localized near the crack.
+       
+
+
+### [KAE: Kolmogorov-Arnold Auto-Encoder for Representation Learning](https://arxiv.org/abs/2501.00420)
+
+**Authors:**
+Fangchen Yu, Ruilizhen Hu, Yidong Lin, Yuqi Ma, Zhenghao Huang, Wenye Li
+
+**Abstract:**
+The Kolmogorov-Arnold Network (KAN) has recently gained attention as an alternative to traditional multi-layer perceptrons (MLPs), offering improved accuracy and interpretability by employing learnable activation functions on edges. In this paper, we introduce the Kolmogorov-Arnold Auto-Encoder (KAE), which integrates KAN with autoencoders (AEs) to enhance representation learning for retrieval, classification, and denoising tasks. Leveraging the flexible polynomial functions in KAN layers, KAE captures complex data patterns and non-linear relationships. Experiments on benchmark datasets demonstrate that KAE improves latent representation quality, reduces reconstruction errors, and achieves superior performance in downstream tasks such as retrieval, classification, and denoising, compared to standard autoencoders and other KAN variants. These results suggest KAE's potential as a useful tool for representation learning. Our code is available at \url{https://github.com/SciYu/KAE/}.
+       
+
+
+### [KAN KAN Buff Signed Graph Neural Networks?](https://arxiv.org/abs/2501.00709)
+
+**Authors:**
+Muhieddine Shebaro, Jelena Tešić
+
+**Abstract:**
+Graph Representation Learning aims to create embeddings for nodes and edges, capturing their features and interconnections. Graph Neural Networks (GNNs) have excelled in this task, leveraging neural networks to model complex graph relationships. Recently, the Kolmogorov-Arnold Neural Network (KAN) emerged as an alternative to Multi-Layer Perceptron (MLP), showing improved accuracy and interpretability with fewer parameters. While KANs have been integrated into unsigned GNNs, their application in signed GNNs remains unexplored. This paper integrates KAN into Signed Graph Convolutional Networks (SGCNs) to evaluate its performance on signed graphs where edges have positive or negative signs. We empirically assess KAN-enhanced SGCNs (KASGCN) on downstream tasks such as signed community detection and link sign prediction to enhance the embedding quality in signed networks. Considering the variability in the results indicated by the relatively large standard deviation, KASGCN demonstrates competitive performance with, or similar to, the vanilla SGCN in the evaluated downstream tasks, and its effectiveness is context-dependent (signed graph and parameters...etc.).
+       
+
+
+### [EHCTNet: Enhanced Hybrid of CNN and Transformer Network for Remote Sensing Image Change Detection](https://arxiv.org/abs/2501.01238)
+
+**Authors:**
+Junjie Yang, Haibo Wan, Zhihai Shang
+
+**Abstract:**
+Remote sensing (RS) change detection incurs a high cost because of false negatives, which are more costly than false positives. Existing frameworks, struggling to improve the Precision metric to reduce the cost of false positive, still have limitations in focusing on the change of interest, which leads to missed detections and discontinuity issues. This work tackles these issues by enhancing feature learning capabilities and integrating the frequency components of feature information, with a strategy to incrementally boost the Recall value. We propose an enhanced hybrid of CNN and Transformer network (EHCTNet) for effectively mining the change information of interest. Firstly, a dual branch feature extraction module is used to extract the multi scale features of RS images. Secondly, the frequency component of these features is exploited by a refined module I. Thirdly, an enhanced token mining module based on the Kolmogorov Arnold Network is utilized to derive semantic information. Finally, the semantic change information's frequency component, beneficial for final detection, is mined from the refined module II. Extensive experiments validate the effectiveness of EHCTNet in comprehending complex changes of interest. The visualization outcomes show that EHCTNet detects more intact and continuous changed areas and perceives more accurate neighboring distinction than state of the art models.
        
 
 
