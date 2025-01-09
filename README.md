@@ -2037,10 +2037,10 @@ This paper presents an experimental study of Kolmogorov-Arnold Networks (KANs) a
 ### [MvKeTR: Chest CT Report Generation with Multi-View Perception and Knowledge Enhancement](https://arxiv.org/abs/2411.18309)
 
 **Authors:**
-Xiwei Deng, Xianchun He, Yudan Zhou, Shuhui Cai, Congbo Cai, Zhong Chen
+Xiwei Deng, Xianchun He, Jiangfeng Bao, Yudan Zhou, Shuhui Cai, Congbo Cai, Zhong Chen
 
 **Abstract:**
-CT report generation (CTRG) aims to automatically generate diagnostic reports for 3D volumes, relieving clinicians' workload and improving patient care. Despite clinical value, existing works fail to effectively incorporate diagnostic information from multiple anatomical views and lack related clinical expertise essential for accurate and reliable diagnosis. To resolve these limitations, we propose a novel Multi-view perception Knowledge-enhanced Tansformer (MvKeTR) to mimic the diagnostic workflow of clinicians. Just as radiologists first examine CT scans from multiple planes, a Multi-View Perception Aggregator (MVPA) with view-aware attention effectively synthesizes diagnostic information from multiple anatomical views. Then, inspired by how radiologists further refer to relevant clinical records to guide diagnostic decision-making, a Cross-Modal Knowledge Enhancer (CMKE) retrieves the most similar reports based on the query volume to incorporate domain knowledge into the diagnosis procedure. Furthermore, instead of traditional MLPs, we employ Kolmogorov-Arnold Networks (KANs) with learnable nonlinear activation functions as the fundamental building blocks of both modules to better capture intricate diagnostic patterns in CT interpretation. Extensive experiments on the public CTRG-Chest-548K dataset demonstrate that our method outpaces prior state-of-the-art models across all metrics.
+CT report generation (CTRG) aims to automatically generate diagnostic reports for 3D volumes, relieving clinicians' workload and improving patient care. Despite clinical value, existing works fail to effectively incorporate diagnostic information from multiple anatomical views and lack related clinical expertise essential for accurate and reliable diagnosis. To resolve these limitations, we propose a novel Multi-view perception Knowledge-enhanced Transformer (MvKeTR) to mimic the diagnostic workflow of clinicians. Just as radiologists first examine CT scans from multiple planes, a Multi-View Perception Aggregator (MVPA) with view-aware attention effectively synthesizes diagnostic information from multiple anatomical views. Then, inspired by how radiologists further refer to relevant clinical records to guide diagnostic decision-making, a Cross-Modal Knowledge Enhancer (CMKE) retrieves the most similar reports based on the query volume to incorporate domain knowledge into the diagnosis procedure. Furthermore, instead of traditional MLPs, we employ Kolmogorov-Arnold Networks (KANs) with learnable nonlinear activation functions as the fundamental building blocks of both modules to better capture intricate diagnostic patterns in CT interpretation. Extensive experiments on the public CTRG-Chest-548K dataset demonstrate that our method outpaces prior state-of-the-art (SOTA) models across almost all metrics. The code will be made publicly available.
        
 
 
@@ -2246,6 +2246,47 @@ Junjie Yang, Haibo Wan, Zhihai Shang
 
 **Abstract:**
 Remote sensing (RS) change detection incurs a high cost because of false negatives, which are more costly than false positives. Existing frameworks, struggling to improve the Precision metric to reduce the cost of false positive, still have limitations in focusing on the change of interest, which leads to missed detections and discontinuity issues. This work tackles these issues by enhancing feature learning capabilities and integrating the frequency components of feature information, with a strategy to incrementally boost the Recall value. We propose an enhanced hybrid of CNN and Transformer network (EHCTNet) for effectively mining the change information of interest. Firstly, a dual branch feature extraction module is used to extract the multi scale features of RS images. Secondly, the frequency component of these features is exploited by a refined module I. Thirdly, an enhanced token mining module based on the Kolmogorov Arnold Network is utilized to derive semantic information. Finally, the semantic change information's frequency component, beneficial for final detection, is mined from the refined module II. Extensive experiments validate the effectiveness of EHCTNet in comprehending complex changes of interest. The visualization outcomes show that EHCTNet detects more intact and continuous changed areas and perceives more accurate neighboring distinction than state of the art models.
+       
+
+
+### [Improved Feature Extraction Network for Neuro-Oriented Target Speaker Extraction](https://arxiv.org/abs/2501.01673)
+
+**Authors:**
+Cunhang Fan, Youdian Gao, Zexu Pan, Jingjing Zhang, Hongyu Zhang, Jie Zhang, Zhao Lv
+
+**Abstract:**
+The recent rapid development of auditory attention decoding (AAD) offers the possibility of using electroencephalography (EEG) as auxiliary information for target speaker extraction. However, effectively modeling long sequences of speech and resolving the identity of the target speaker from EEG signals remains a major challenge. In this paper, an improved feature extraction network (IFENet) is proposed for neuro-oriented target speaker extraction, which mainly consists of a speech encoder with dual-path Mamba and an EEG encoder with Kolmogorov-Arnold Networks (KAN). We propose SpeechBiMamba, which makes use of dual-path Mamba in modeling local and global speech sequences to extract speech features. In addition, we propose EEGKAN to effectively extract EEG features that are closely related to the auditory stimuli and locate the target speaker through the subject's attention information. Experiments on the KUL and AVED datasets show that IFENet outperforms the state-of-the-art model, achieving 36\% and 29\% relative improvements in terms of scale-invariant signal-to-distortion ratio (SI-SDR) under an open evaluation condition.
+       
+
+
+### [KM-UNet KAN Mamba UNet for medical image segmentation](https://arxiv.org/abs/2501.02559)
+
+**Author:**
+Yibo Zhang
+
+**Abstract:**
+Medical image segmentation is a critical task in medical imaging analysis. Traditional CNN-based methods struggle with modeling long-range dependencies, while Transformer-based models, despite their success, suffer from quadratic computational complexity. To address these limitations, we propose KM-UNet, a novel U-shaped network architecture that combines the strengths of Kolmogorov-Arnold Networks (KANs) and state-space models (SSMs). KM-UNet leverages the Kolmogorov-Arnold representation theorem for efficient feature representation and SSMs for scalable long-range modeling, achieving a balance between accuracy and computational efficiency. We evaluate KM-UNet on five benchmark datasets: ISIC17, ISIC18, CVC, BUSI, and GLAS. Experimental results demonstrate that KM-UNet achieves competitive performance compared to state-of-the-art methods in medical image segmentation tasks. To the best of our knowledge, KM-UNet is the first medical image segmentation framework integrating KANs and SSMs. This work provides a valuable baseline and new insights for the development of more efficient and interpretable medical image segmentation systems. The code is open source at https://github.com/2760613195/KM_UNet
+  Keywords:KAN,Manba, state-space models,UNet, Medical image segmentation, Deep learning
+       
+
+
+### [LWFNet: Coherent Doppler Wind Lidar-Based Network for Wind Field Retrieval](https://arxiv.org/abs/2501.02613)
+
+**Authors:**
+Ran Tao, Chong Wang, Hao Chen, Mingjiao Jia, Xiang Shang, Luoyuan Qu, Guoliang Shentu, Yanyu Lu, Yanfeng Huo, Lei Bai, Xianghui Xue, Xiankang Dou
+
+**Abstract:**
+Accurate detection of wind fields within the troposphere is essential for atmospheric dynamics research and plays a crucial role in extreme weather forecasting. Coherent Doppler wind lidar (CDWL) is widely regarded as the most suitable technique for high spatial and temporal resolution wind field detection. However, since coherent detection relies heavily on the concentration of aerosol particles, which cause Mie scattering, the received backscattering lidar signal exhibits significantly low intensity at high altitudes. As a result, conventional methods, such as spectral centroid estimation, often fail to produce credible and accurate wind retrieval results in these regions. To address this issue, we propose LWFNet, the first Lidar-based Wind Field (WF) retrieval neural Network, built upon Transformer and the Kolmogorov-Arnold network. Our model is trained solely on targets derived from the traditional wind retrieval algorithm and utilizes radiosonde measurements as the ground truth for test results evaluation. Experimental results demonstrate that LWFNet not only extends the maximum wind field detection range but also produces more accurate results, exhibiting a level of precision that surpasses the labeled targets. This phenomenon, which we refer to as super-accuracy, is explored by investigating the potential underlying factors that contribute to this intriguing occurrence. In addition, we compare the performance of LWFNet with other state-of-the-art (SOTA) models, highlighting its superior effectiveness and capability in high-resolution wind retrieval. LWFNet demonstrates remarkable performance in lidar-based wind field retrieval, setting a benchmark for future research and advancing the development of deep learning models in this domain.
+       
+
+
+### [Scaled-cPIKANs: Domain Scaling in Chebyshev-based Physics-informed Kolmogorov-Arnold Networks](https://arxiv.org/abs/2501.02762)
+
+**Authors:**
+Farinaz Mostajeran, Salah A Faroughi
+
+**Abstract:**
+Partial Differential Equations (PDEs) are integral to modeling many scientific and engineering problems. Physics-informed Neural Networks (PINNs) have emerged as promising tools for solving PDEs by embedding governing equations into the neural network loss function. However, when dealing with PDEs characterized by strong oscillatory dynamics over large computational domains, PINNs based on Multilayer Perceptrons (MLPs) often exhibit poor convergence and reduced accuracy. To address these challenges, this paper introduces Scaled-cPIKAN, a physics-informed architecture rooted in Kolmogorov-Arnold Networks (KANs). Scaled-cPIKAN integrates Chebyshev polynomial representations with a domain scaling approach that transforms spatial variables in PDEs into the standardized domain \([-1,1]^d\), as intrinsically required by Chebyshev polynomials. By combining the flexibility of Chebyshev-based KANs (cKANs) with the physics-driven principles of PINNs, and the spatial domain transformation, Scaled-cPIKAN enables efficient representation of oscillatory dynamics across extended spatial domains while improving computational performance. We demonstrate Scaled-cPIKAN efficacy using four benchmark problems: the diffusion equation, the Helmholtz equation, the Allen-Cahn equation, as well as both forward and inverse formulations of the reaction-diffusion equation (with and without noisy data). Our results show that Scaled-cPIKAN significantly outperforms existing methods in all test cases. In particular, it achieves several orders of magnitude higher accuracy and faster convergence rate, making it a highly efficient tool for approximating PDE solutions that feature oscillatory behavior over large spatial domains.
        
 
 
