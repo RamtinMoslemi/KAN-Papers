@@ -479,7 +479,7 @@ The emergence of Kolmogorov-Arnold Networks (KANs) has sparked significant inter
 Eric A. F. Reinhardt, P. R. Dinesh, Sergei Gleyzer
 
 **Abstract:**
-Recent work has established an alternative to traditional multi-layer perceptron neural networks in the form of Kolmogorov-Arnold Networks (KAN). The general KAN framework uses learnable activation functions on the edges of the computational graph followed by summation on nodes. The learnable edge activation functions in the original implementation are basis spline functions (B-Spline). Here, we present a model in which learnable grids of B-Spline activation functions are replaced by grids of re-weighted sine functions. We show that this leads to better or comparable numerical performance to B-Spline KAN models on the MNIST benchmark, while also providing a substantial speed increase on the order of 4-8 times.
+Recent work has established an alternative to traditional multi-layer perceptron neural networks in the form of Kolmogorov-Arnold Networks (KAN). The general KAN framework uses learnable activation functions on the edges of the computational graph followed by summation on nodes. The learnable edge activation functions in the original implementation are basis spline functions (B-Spline). Here, we present a model in which learnable grids of B-Spline activation functions are replaced by grids of re-weighted sine functions (SineKAN). We evaluate numerical performance of our model on a benchmark vision task. We show that our model can perform better than or comparable to B-Spline KAN models and an alternative KAN implementation based on periodic cosine and sine functions representing a Fourier Series. Further, we show that SineKAN has numerical accuracy that could scale comparably to dense neural networks (DNNs). Compared to the two baseline KAN models, SineKAN achieves a substantial speed increase at all hidden layer sizes, batch sizes, and depths. Current advantage of DNNs due to hardware and software optimizations are discussed along with theoretical scaling. Additionally, properties of SineKAN compared to other KAN implementations and current limitations are also discussed
        
 
 
@@ -936,13 +936,13 @@ Kolmogorov-Arnold Networks (KAN) models were recently proposed and claimed to pr
        
 
 
-### [Beyond KAN: Introducing KarSein for Adaptive High-Order Feature Interaction Modeling in CTR Prediction](https://arxiv.org/abs/2408.08713)
+### [CTR-KAN: KAN for Adaptive High-Order Feature Interaction Modeling](https://arxiv.org/abs/2408.08713)
 
 **Authors:**
 Yunxiao Shi, Wujiang Xu, Haimin Zhang, Qiang Wu, Yongfeng Zhang, Min Xu
 
 **Abstract:**
-Modeling feature interactions is crucial for click-through rate (CTR) prediction, particularly when it comes to high-order explicit interactions. Traditional methods struggle with this task because they often predefine a maximum interaction order, which relies heavily on prior knowledge and can limit the model's effectiveness. Additionally, modeling high-order interactions typically leads to increased computational costs. Therefore, the challenge lies in adaptively modeling high-order feature interactions while maintaining efficiency. To address this issue, we introduce Kolmogorov-Arnold Represented Sparse Efficient Interaction Network (KarSein), designed to optimize both predictive accuracy and computational efficiency. We firstly identify limitations of directly applying Kolmogorov-Arnold Networks (KAN) to CTR and then introduce KarSein to overcome these issues. It features a novel architecture that reduces the computational costs of KAN and supports embedding vectors as feature inputs. Additionally, KarSein employs guided symbolic regression to address the challenge of KAN in spontaneously learning multiplicative relationships. Extensive experiments demonstrate KarSein's superior performance, achieving significant predictive accuracy with minimal computational overhead. Furthermore, KarSein maintains strong global explainability while enabling the removal of redundant features, resulting in a sparse network structure. These advantages also position KarSein as a promising method for efficient inference.
+Modeling high-order feature interactions is critical for click-through rate (CTR) prediction, yet traditional approaches often face challenges in balancing predictive accuracy and computational efficiency. These methods typically rely on pre-defined interaction orders, which limit flexibility and require extensive prior knowledge. Moreover, explicitly modeling high-order interactions can lead to significant computational overhead. To tackle these challenges, we propose CTR-KAN, an adaptive framework for efficient high-order feature interaction modeling. CTR-KAN builds upon the Kolmogorov-Arnold Network (KAN) paradigm, addressing its limitations in CTR prediction tasks. Specifically, we introduce key enhancements, including a lightweight architecture that reduces the computational complexity of KAN and supports embedding-based feature representations. Additionally, CTR-KAN integrates guided symbolic regression to effectively capture multiplicative relationships, a known challenge in standard KAN implementations. Extensive experiments demonstrate that CTR-KAN achieves state-of-the-art predictive accuracy with significantly lower computational costs. Its sparse network structure also facilitates feature pruning and enhances global interpretability, making CTR-KAN a powerful tool for efficient inference in real-world CTR prediction scenarios.
        
 
 
@@ -1831,16 +1831,6 @@ Kolmogorov-Arnold Networks have recently been introduced as a flexible alternati
        
 
 
-### [PEP-GS: Perceptually-Enhanced Precise Structured 3D Gaussians for View-Adaptive Rendering](https://arxiv.org/abs/2411.05731)
-
-**Authors:**
-Junxi Jin, Xiulai Li, Haiping Huang, Lianjun Liu, Yujie Sun
-
-**Abstract:**
-Recent advances in structured 3D Gaussians for view-adaptive rendering, particularly through methods like Scaffold-GS, have demonstrated promising results in neural scene representation. However, existing approaches still face challenges in perceptual consistency and precise view-dependent effects. We present PEP-GS, a novel framework that enhances structured 3D Gaussians through three key innovations: (1) a Local-Enhanced Multi-head Self-Attention (LEMSA) mechanism that replaces spherical harmonics for more accurate view-dependent color decoding, and (2) Kolmogorov-Arnold Networks (KAN) that optimize Gaussian opacity and covariance functions for enhanced interpretability and splatting precision. (3) a Neural Laplacian Pyramid Decomposition (NLPD) that improves perceptual similarity across views. Our comprehensive evaluation across multiple datasets indicates that, compared to the current state-of-the-art methods, these improvements are particularly evident in challenging scenarios such as view-dependent effects, specular reflections, fine-scale details and false geometry generation.
-       
-
-
 ### [A Survey on Kolmogorov-Arnold Network](https://arxiv.org/abs/2411.06078)
 
 **Authors:**
@@ -2235,7 +2225,7 @@ The Kolmogorov-Arnold Network (KAN) has recently gained attention as an alternat
 Muhieddine Shebaro, Jelena Tešić
 
 **Abstract:**
-Graph Representation Learning focuses on creating embeddings for nodes and edges that capture their features and connections. Graph Neural Networks (GNNs) use neural networks to model complex graph relationships. The Kolmogorov-Arnold Neural Network (KAN) has recently emerged as an alternative to the Multi-Layer Perceptron (MLP), offering better accuracy and interpretability with fewer parameters. KANs have been applied to GNN tasks. This paper introduces the integration of KANs into Signed Graph Convolutional Networks (SGCNs). We evaluate KAN-enhanced SGCNs (KASGCN) on signed community detection and link sign prediction tasks to improve embedding quality in signed networks. While the results show some variability, KASGCN performs competitively with or similarly to the standard SGCN in the functions tested. Its effectiveness depends on the specific context, such as the signed graph and parameter settings.
+Graph Representation Learning aims to create effective embeddings for nodes and edges that encapsulate their features and relationships. Graph Neural Networks (GNNs) leverage neural networks to model complex graph structures. Recently, the Kolmogorov-Arnold Neural Network (KAN) has emerged as a promising alternative to the traditional Multilayer Perceptron (MLP), offering improved accuracy and interpretability with fewer parameters. In this paper, we propose the integration of KANs into Signed Graph Convolutional Networks (SGCNs), leading to the development of KAN-enhanced SGCNs (KASGCN). We evaluate KASGCN on tasks such as signed community detection and link sign prediction to improve embedding quality in signed networks. Our experimental results indicate that KASGCN exhibits competitive or comparable performance to standard SGCNs across the tasks evaluated, with performance variability depending on the specific characteristics of the signed graph and the choice of parameter settings. These findings suggest that KASGCNs hold promise for enhancing signed graph analysis with context-dependent effectiveness.
        
 
 
@@ -2346,7 +2336,7 @@ Xuhui Guo, Tanmoy Dam, Rohan Dhamdhere, Gourav Modanwal, Anant Madabhushi
 Hoang-Thang Ta, Duy-Quy Thai, Anh Tran, Grigori Sidorov, Alexander Gelbukh
 
 **Abstract:**
-Kolmogorov-Arnold Networks (KANs) represent an innovation in neural network architectures, offering a compelling alternative to Multi-Layer Perceptrons (MLPs) in models such as Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and Transformers. By advancing network design, KANs are driving groundbreaking research and enabling transformative applications across various scientific domains involving neural networks. However, existing KANs often require significantly more parameters in their network layers compared to MLPs. To address this limitation, this paper introduces PRKANs (\textbf{P}arameter-\textbf{R}educed \textbf{K}olmogorov-\textbf{A}rnold \textbf{N}etworks), which employ several methods to reduce the parameter count in KAN layers, making them comparable to MLP layers. Experimental results on the MNIST and Fashion-MNIST datasets demonstrate that PRKANs with attention mechanisms outperform several existing KANs and rival the performance of MLPs, albeit with slightly longer training times. Furthermore, the study highlights the advantages of Gaussian Radial Basis Functions (GRBFs) and layer normalization in KAN designs. The repository for this work is available at: \url{https://github.com/hoangthangta/All-KAN}.
+Kolmogorov-Arnold Networks (KANs) represent an innovation in neural network architectures, offering a compelling alternative to Multi-Layer Perceptrons (MLPs) in models such as Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and Transformers. By advancing network design, KANs drive groundbreaking research and enable transformative applications across various scientific domains involving neural networks. However, existing KANs often require significantly more parameters in their network layers than MLPs. To address this limitation, this paper introduces PRKANs (Parameter-Reduced Kolmogorov-Arnold Networks), which employ several methods to reduce the parameter count in KAN layers, making them comparable to MLP layers. Experimental results on the MNIST and Fashion-MNIST datasets demonstrate that PRKANs outperform several existing KANs, and their variant with attention mechanisms rivals the performance of MLPs, albeit with slightly longer training times. Furthermore, the study highlights the advantages of Gaussian Radial Basis Functions (GRBFs) and layer normalization in KAN designs. The repository for this work is available at: https://github.com/hoangthangta/All-KAN.
        
 
 
@@ -2376,7 +2366,7 @@ Personalized cancer treatment is revolutionizing oncology by leveraging precisio
 Zhiwei Gao, George Em Karniadakis
 
 **Abstract:**
-Uncertainty quantification (UQ) plays a pivotal role in scientific machine learning, especially when surrogate models are used to approximate complex systems. Although multilayer perceptions (MLPs) are commonly employed as surrogates, they often suffer from overfitting due to their large number of parameters. Kolmogorov-Arnold networks (KANs) offer an alternative solution with fewer parameters. However, gradient-based inference methods, such as Hamiltonian Monte Carlo (HMC), may result in computational inefficiency when applied to KANs, especially for large-scale datasets, due to the high cost of back-propagation.To address these challenges, we propose a novel approach, combining the dropout Tikhonov ensemble Kalman inversion (DTEKI) with Chebyshev KANs. This gradient-free method effectively mitigates overfitting and enhances numerical stability. Additionally, we incorporate the active subspace method to reduce the parameter-space dimensionality, allowing us to improve the accuracy of predictions and obtain more reliable uncertainty estimates.Extensive experiments demonstrate the efficacy of our approach in various test cases, including scenarios with large datasets and high noise levels. Our results show that the new method achieves comparable or better accuracy, much higher efficiency as well as stability compared to HMC, in addition to scalability. Moreover, by leveraging the low-dimensional parameter subspace, our method preserves prediction accuracy while substantially reducing further the computational cost.
+Uncertainty quantification (UQ) plays a pivotal role in scientific machine learning, especially when surrogate models are used to approximate complex systems. Although multilayer perceptions (MLPs) are commonly employed as surrogates, they often suffer from overfitting due to their large number of parameters. Kolmogorov-Arnold networks (KANs) offer an alternative solution with fewer parameters. However, gradient-based inference methods, such as Hamiltonian Monte Carlo (HMC), may result in computational inefficiency when applied to KANs, especially for large-scale datasets, due to the high cost of back-propagation. To address these challenges, we propose a novel approach, combining the dropout Tikhonov ensemble Kalman inversion (DTEKI) with Chebyshev KANs. This gradient-free method effectively mitigates overfitting and enhances numerical stability. Additionally, we incorporate the active subspace method to reduce the parameter-space dimensionality, allowing us to improve the accuracy of predictions and obtain more reliable uncertainty estimates. Extensive experiments demonstrate the efficacy of our approach in various test cases, including scenarios with large datasets and high noise levels. Our results show that the new method achieves comparable or better accuracy, much higher efficiency as well as stability compared to HMC, in addition to scalability. Moreover, by leveraging the low-dimensional parameter subspace, our method preserves prediction accuracy while substantially reducing further the computational cost.
        
 
 
@@ -2407,6 +2397,66 @@ Mitul Goswami, Romit Chatterjee, Somnath Mahato, Prasant Kumar Pattnaik
 
 **Abstract:**
 The research presents a study on enhancing the robustness of Wi-Fi-based indoor positioning systems against adversarial attacks. The goal is to improve the positioning accuracy and resilience of these systems under two attack scenarios: Wi-Fi Spoofing and Signal Strength Manipulation. Three models are developed and evaluated: a baseline model (M_Base), an adversarially trained robust model (M_Rob), and an ensemble model (M_Ens). All models utilize a Kolmogorov-Arnold Network (KAN) architecture. The robust model is trained with adversarially perturbed data, while the ensemble model combines predictions from both the base and robust models. Experimental results show that the robust model reduces positioning error by approximately 10% compared to the baseline, achieving 2.03 meters error under Wi-Fi spoofing and 2.00 meters under signal strength manipulation. The ensemble model further outperforms with errors of 2.01 meters and 1.975 meters for the respective attack types. This analysis highlights the effectiveness of adversarial training techniques in mitigating attack impacts. The findings underscore the importance of considering adversarial scenarios in developing indoor positioning systems, as improved resilience can significantly enhance the accuracy and reliability of such systems in mission-critical environments.
+       
+
+
+### [Boosting the Accuracy of Stock Market Prediction via Multi-Layer Hybrid MTL Structure](https://arxiv.org/abs/2501.09760)
+
+**Author:**
+Yuxi Hong
+
+**Abstract:**
+Accurate stock market prediction provides great opportunities for informed decision-making, yet existing methods struggle with financial data's non-linear, high-dimensional, and volatile characteristics. Advanced predictive models are needed to effectively address these complexities. This paper proposes a novel multi-layer hybrid multi-task learning (MTL) framework aimed at achieving more efficient stock market predictions. It involves a Transformer encoder to extract complex correspondences between various input features, a Bidirectional Gated Recurrent Unit (BiGRU) to capture long-term temporal relationships, and a Kolmogorov-Arnold Network (KAN) to enhance the learning process. Experimental evaluations indicate that the proposed learning structure achieves great performance, with an MAE as low as 1.078, a MAPE as low as 0.012, and an R^2 as high as 0.98, when compared with other competitive networks.
+       
+
+
+### [KAA: Kolmogorov-Arnold Attention for Enhancing Attentive Graph Neural Networks](https://arxiv.org/abs/2501.13456)
+
+**Authors:**
+Taoran Fang, Tianhong Gao, Chunping Wang, Yihao Shang, Wei Chow, Lei Chen, Yang Yang
+
+**Abstract:**
+Graph neural networks (GNNs) with attention mechanisms, often referred to as attentive GNNs, have emerged as a prominent paradigm in advanced GNN models in recent years. However, our understanding of the critical process of scoring neighbor nodes remains limited, leading to the underperformance of many existing attentive GNNs. In this paper, we unify the scoring functions of current attentive GNNs and propose Kolmogorov-Arnold Attention (KAA), which integrates the Kolmogorov-Arnold Network (KAN) architecture into the scoring process. KAA enhances the performance of scoring functions across the board and can be applied to nearly all existing attentive GNNs. To compare the expressive power of KAA with other scoring functions, we introduce Maximum Ranking Distance (MRD) to quantitatively estimate their upper bounds in ranking errors for node importance. Our analysis reveals that, under limited parameters and constraints on width and depth, both linear transformation-based and MLP-based scoring functions exhibit finite expressive power. In contrast, our proposed KAA, even with a single-layer KAN parameterized by zero-order B-spline functions, demonstrates nearly infinite expressive power. Extensive experiments on both node-level and graph-level tasks using various backbone models show that KAA-enhanced scoring functions consistently outperform their original counterparts, achieving performance improvements of over 20% in some cases.
+       
+
+
+### [Local Control Networks (LCNs): Optimizing Flexibility in Neural Network Data Pattern Capture](https://arxiv.org/abs/2501.14000)
+
+**Authors:**
+Hy Nguyen, Duy Khoa Pham, Srikanth Thudumu, Hung Du, Rajesh Vasa, Kon Mouzakis
+
+**Abstract:**
+The widespread use of Multi-layer perceptrons (MLPs) often relies on a fixed activation function (e.g., ReLU, Sigmoid, Tanh) for all nodes within the hidden layers. While effective in many scenarios, this uniformity may limit the networks ability to capture complex data patterns. We argue that employing the same activation function at every node is suboptimal and propose leveraging different activation functions at each node to increase flexibility and adaptability. To achieve this, we introduce Local Control Networks (LCNs), which leverage B-spline functions to enable distinct activation curves at each node. Our mathematical analysis demonstrates the properties and benefits of LCNs over conventional MLPs. In addition, we demonstrate that more complex architectures, such as Kolmogorov-Arnold Networks (KANs), are unnecessary in certain scenarios, and LCNs can be a more efficient alternative. Empirical experiments on various benchmarks and datasets validate our theoretical findings. In computer vision tasks, LCNs achieve marginal improvements over MLPs and outperform KANs by approximately 5\%, while also being more computationally efficient than KANs. In basic machine learning tasks, LCNs show a 1\% improvement over MLPs and a 0.6\% improvement over KANs. For symbolic formula representation tasks, LCNs perform on par with KANs, with both architectures outperforming MLPs. Our findings suggest that diverse activations at the node level can lead to improved performance and efficiency.
+       
+
+
+### [Kolmogorov Arnold Neural Interpolator for Downscaling and Correcting Meteorological Fields from In-Situ Observations](https://arxiv.org/abs/2501.14404)
+
+**Authors:**
+Zili Liu, Hao Chen, Lei Bai, Wenyuan Li, Zhengxia Zou, Zhenwei Shi
+
+**Abstract:**
+Obtaining accurate weather forecasts at station locations is a critical challenge due to systematic biases arising from the mismatch between multi-scale, continuous atmospheric characteristic and their discrete, gridded representations. Previous works have primarily focused on modeling gridded meteorological data, inherently neglecting the off-grid, continuous nature of atmospheric states and leaving such biases unresolved. To address this, we propose the Kolmogorov Arnold Neural Interpolator (KANI), a novel framework that redefines meteorological field representation as continuous neural functions derived from discretized grids. Grounded in the Kolmogorov Arnold theorem, KANI captures the inherent continuity of atmospheric states and leverages sparse in-situ observations to correct these biases systematically. Furthermore, KANI introduces an innovative zero-shot downscaling capability, guided by high-resolution topographic textures without requiring high-resolution meteorological fields for supervision. Experimental results across three sub-regions of the continental United States indicate that KANI achieves an accuracy improvement of 40.28% for temperature and 67.41% for wind speed, highlighting its significant improvement over traditional interpolation methods. This enables continuous neural representation of meteorological variables through neural networks, transcending the limitations of conventional grid-based representations.
+       
+
+
+### [Discovering Dynamics with Kolmogorov Arnold Networks: Linear Multistep Method-Based Algorithms and Error Estimation](https://arxiv.org/abs/2501.15066)
+
+**Authors:**
+Jintao Hu, Hongjiong Tian, Qian Guo
+
+**Abstract:**
+Uncovering the underlying dynamics from observed data is a critical task in various scientific fields. Recent advances have shown that combining deep learning techniques with linear multistep methods (LMMs) can be highly effective for this purpose. In this work, we propose a novel framework that integrates Kolmogorov Arnold Networks (KANs) with LMMs for the discovery and approximation of dynamical systems' vector fields. Specifically, we begin by establishing precise error bounds for two-layer B-spline KANs when approximating the governing functions of dynamical systems. Leveraging the approximation capabilities of KANs, we demonstrate that for certain families of LMMs, the total error is constrained within a specific range that accounts for both the method's step size and the network's approximation accuracy. Additionally, we analyze the difference between the numerical solution obtained from solving the ordinary differential equations with the fitted vector fields and the true solution of the dynamical system. To validate our theoretical results, we provide several numerical examples that highlight the effectiveness of our approach.
+       
+
+
+### [Efficiency Bottlenecks of Convolutional Kolmogorov-Arnold Networks: A Comprehensive Scrutiny with ImageNet, AlexNet, LeNet and Tabular Classification](https://arxiv.org/abs/2501.15757)
+
+**Authors:**
+Ashim Dahal, Saydul Akbar Murad, Nick Rahimi
+
+**Abstract:**
+Algorithmic level developments like Convolutional Neural Networks, transformers, attention mechanism, Retrieval Augmented Generation and so on have changed Artificial Intelligence. Recent such development was observed by Kolmogorov-Arnold Networks that suggested to challenge the fundamental concept of a Neural Network, thus change Multilayer Perceptron, and Convolutional Neural Networks. They received a good reception in terms of scientific modeling, yet had some drawbacks in terms of efficiency. In this paper, we train Convolutional Kolmogorov Arnold Networks (CKANs) with the ImageNet-1k dataset with 1.3 million images, MNIST dataset with 60k images and a tabular biological science related MoA dataset and test the promise of CKANs in terms of FLOPS, Inference Time, number of trainable parameters and training time against the accuracy, precision, recall and f-1 score they produce against the standard industry practice on CNN models. We show that the CKANs perform fair yet slower than CNNs in small size dataset like MoA and MNIST but are not nearly comparable as the dataset gets larger and more complex like the ImageNet. The code implementation of this paper can be found on the link: \href{https://github.com/ashimdahal/Study-of-Convolutional-Kolmogorov-Arnold-networks}{https://github.com/ashimdahal/Study-of-Convolutional-Kolmogorov-Arnold-networks}
        
 
 
