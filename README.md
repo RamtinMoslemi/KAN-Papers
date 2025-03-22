@@ -4,7 +4,7 @@ A complete list of papers on KANs. Papers with submission dates before the origi
 ## Papers by Month
 Number of papers submitted to arXiv by month.
 
-![monthly_papers](figures/papers_by_month.svg)
+![monthly_papers](figures/papers_by_month.pdf)
 
 ## Word Clouds
 Word clouds of KAN paper titles and abstracts.
@@ -18,7 +18,9 @@ You can play with the notebook:
 
 
 # 2024
-## April
+<details>
+<summary><h2>April</h2></summary>
+
 ### [KAN: Kolmogorov-Arnold Networks](https://arxiv.org/abs/2404.19756)
 
 **Authors:**
@@ -29,7 +31,11 @@ Inspired by the Kolmogorov-Arnold representation theorem, we propose Kolmogorov-
        
 
 
-## May
+</details>
+
+<details>
+<summary><h2>May</h2></summary>
+
 ### [Biology-inspired joint distribution neurons based on Hierarchical Correlation Reconstruction allowing for multidirectional neural networks](https://arxiv.org/abs/2405.05097)
 
 **Author:**
@@ -150,7 +156,11 @@ The modern digital engineering design often requires costly repeated simulations
        
 
 
-## June
+</details>
+
+<details>
+<summary><h2>June</h2></summary>
+
 ### [Kolmogorov-Arnold Network for Satellite Image Classification in Remote Sensing](https://arxiv.org/abs/2406.00600)
 
 **Author:**
@@ -452,7 +462,11 @@ Kolmogorov-Arnold networks (KANs) have attracted attention recently as an altern
        
 
 
-## July
+</details>
+
+<details>
+<summary><h2>July</h2></summary>
+
 ### [SpectralKAN: Kolmogorov-Arnold Network for Hyperspectral Images Change Detection](https://arxiv.org/abs/2407.00949)
 
 **Authors:**
@@ -735,7 +749,11 @@ The need for scalable and expressive models in machine learning is paramount, pa
        
 
 
-## August
+</details>
+
+<details>
+<summary><h2>August</h2></summary>
+
 ### [TASI Lectures on Physics for Machine Learning](https://arxiv.org/abs/2408.00082)
 
 **Author:**
@@ -1086,7 +1104,11 @@ Automatic Speaker Verification (ASV) systems, which identify speakers based on t
        
 
 
-## September
+</details>
+
+<details>
+<summary><h2>September</h2></summary>
+
 ### [GNN-Empowered Effective Partial Observation MARL Method for AoI Management in Multi-UAV Network](https://arxiv.org/abs/2409.00036)
 
 **Authors:**
@@ -1407,7 +1429,11 @@ We present Parametric Piecewise Linear Networks (PPLNs) for temporal vision infe
        
 
 
-## October
+</details>
+
+<details>
+<summary><h2>October</h2></summary>
+
 ### [KANOP: A Data-Efficient Option Pricing Model using Kolmogorov-Arnold Networks](https://arxiv.org/abs/2410.00419)
 
 **Authors:**
@@ -1489,13 +1515,13 @@ Recent advancements in both representation learning and function learning have d
        
 
 
-### [P1-KAN an effective Kolmogorov Arnold Network for function approximation](https://arxiv.org/abs/2410.03801)
+### [P1-KAN: an effective Kolmogorov-Arnold network with application to hydraulic valley optimization](https://arxiv.org/abs/2410.03801)
 
 **Author:**
 Xavier Warin
 
 **Abstract:**
-A new Kolmogorov-Arnold network (KAN) is proposed to approximate potentially irregular functions in high dimension. We show that it outperforms multilayer perceptrons in terms of accuracy and converges faster. We also compare it with several proposed KAN networks: the original spline-based KAN network appears to be more effective for smooth functions, while the P1-KAN network is more effective for irregular functions.
+A new Kolmogorov-Arnold network (KAN) is proposed to approximate potentially irregular functions in high dimensions. We provide error bounds for this approximation, assuming that the Kolmogorov-Arnold expansion functions are sufficiently smooth. When the function is only continuous, we also provide universal approximation theorems. We show that it outperforms multilayer perceptrons in terms of accuracy and convergence speed. We also compare it with several proposed KAN networks: it outperforms all networks for irregular functions and achieves similar accuracy to the original spline-based KAN network for smooth functions. Finally, we compare some of the KAN networks in optimizing a French hydraulic valley.
        
 
 
@@ -1760,7 +1786,11 @@ The 3-hinge gyrus (3HG) is a newly defined folding pattern, which is the conjunc
        
 
 
-## November
+</details>
+
+<details>
+<summary><h2>November</h2></summary>
+
 ### [KAN-AD: Time Series Anomaly Detection with Kolmogorov-Arnold Networks](https://arxiv.org/abs/2411.00278)
 
 **Authors:**
@@ -2044,7 +2074,11 @@ We investigate Kolmogorov-Arnold networks (KANs) for non-linear equalization of 
        
 
 
-## December
+</details>
+
+<details>
+<summary><h2>December</h2></summary>
+
 ### [Option Pricing with Convolutional Kolmogorov-Arnold Networks](https://arxiv.org/abs/2412.01224)
 
 **Authors:**
@@ -2197,8 +2231,12 @@ Parkinson's Disease (PD) is a degenerative neurological disorder that impairs mo
        
 
 
+</details>
+
 # 2025
-## January
+<details>
+<summary><h2>January</h2></summary>
+
 ### [Predicting Crack Nucleation and Propagation in Brittle Materials Using Deep Operator Networks with Diverse Trunk Architectures](https://arxiv.org/abs/2501.00016)
 
 **Authors:**
@@ -2530,7 +2568,11 @@ XNet is a single-layer neural network architecture that leverages Cauchy integra
        
 
 
-## February
+</details>
+
+<details>
+<summary><h2>February</h2></summary>
+
 ### [On the study of frequency control and spectral bias in Wavelet-Based Kolmogorov Arnold networks: A path to physics-informed KANs](https://arxiv.org/abs/2502.00280)
 
 **Authors:**
@@ -2803,7 +2845,11 @@ Although multi-instance learning (MIL) has succeeded in pathological image class
        
 
 
-## March
+</details>
+
+<details>
+<summary><h2>March</h2></summary>
+
 ### [Fed-KAN: Federated Learning with Kolmogorov-Arnold Networks for Traffic Prediction](https://arxiv.org/abs/2503.00154)
 
 **Authors:**
@@ -2893,4 +2939,136 @@ Jiayi Zhang, Yiming Zhang, Yuan Zheng, Yuchen Wang, Jinjiang You, Yuchen Xu, Wen
 Urban traffic optimization is critical for improving transportation efficiency and alleviating congestion, particularly in large-scale dynamic networks. Traditional methods, such as Dijkstra's and Floyd's algorithms, provide effective solutions in static settings, but they struggle with the spatial-temporal complexity of real-world traffic flows. In this work, we propose TrafficKAN-GCN, a hybrid deep learning framework combining Kolmogorov-Arnold Networks (KAN) with Graph Convolutional Networks (GCN), designed to enhance urban traffic flow optimization. By integrating KAN's adaptive nonlinear function approximation with GCN's spatial graph learning capabilities, TrafficKAN-GCN captures both complex traffic patterns and topological dependencies. We evaluate the proposed framework using real-world traffic data from the Baltimore Metropolitan area. Compared with baseline models such as MLP-GCN, standard GCN, and Transformer-based approaches, TrafficKAN-GCN achieves competitive prediction accuracy while demonstrating improved robustness in handling noisy and irregular traffic data. Our experiments further highlight the framework's ability to redistribute traffic flow, mitigate congestion, and adapt to disruptive events, such as the Francis Scott Key Bridge collapse. This study contributes to the growing body of work on hybrid graph learning for intelligent transportation systems, highlighting the potential of combining KAN and GCN for real-time traffic optimization. Future work will focus on reducing computational overhead and integrating Transformer-based temporal modeling for enhanced long-term traffic prediction. The proposed TrafficKAN-GCN framework offers a promising direction for data-driven urban mobility management, balancing predictive accuracy, robustness, and computational efficiency.
        
 
+
+### [Can KAN CANs? Input-convex Kolmogorov-Arnold Networks (KANs) as hyperelastic constitutive artificial neural networks (CANs)](https://arxiv.org/abs/2503.05617)
+
+**Authors:**
+Prakash Thakolkaran, Yaqi Guo, Shivam Saini, Mathias Peirlinck, Benjamin Alheit, Siddhant Kumar
+
+**Abstract:**
+Traditional constitutive models rely on hand-crafted parametric forms with limited expressivity and generalizability, while neural network-based models can capture complex material behavior but often lack interpretability. To balance these trade-offs, we present Input-Convex Kolmogorov-Arnold Networks (ICKANs) for learning polyconvex hyperelastic constitutive laws. ICKANs leverage the Kolmogorov-Arnold representation, decomposing the model into compositions of trainable univariate spline-based activation functions for rich expressivity. We introduce trainable input-convex splines within the KAN architecture, ensuring physically admissible polyconvex hyperelastic models. The resulting models are both compact and interpretable, enabling explicit extraction of analytical constitutive relationships through an input-convex symbolic regression techinque. Through unsupervised training on full-field strain data and limited global force measurements, ICKANs accurately capture nonlinear stress-strain behavior across diverse strain states. Finite element simulations of unseen geometries with trained ICKAN hyperelastic constitutive models confirm the framework's robustness and generalization capability.
+       
+
+
+### [AF-KAN: Activation Function-Based Kolmogorov-Arnold Networks for Efficient Representation Learning](https://arxiv.org/abs/2503.06112)
+
+**Authors:**
+Hoang-Thang Ta, Anh Tran
+
+**Abstract:**
+Kolmogorov-Arnold Networks (KANs) have inspired numerous works exploring their applications across a wide range of scientific problems, with the potential to replace Multilayer Perceptrons (MLPs). While many KANs are designed using basis and polynomial functions, such as B-splines, ReLU-KAN utilizes a combination of ReLU functions to mimic the structure of B-splines and take advantage of ReLU's speed. However, ReLU-KAN is not built for multiple inputs, and its limitations stem from ReLU's handling of negative values, which can restrict feature extraction. To address these issues, we introduce Activation Function-Based Kolmogorov-Arnold Networks (AF-KAN), expanding ReLU-KAN with various activations and their function combinations. This novel KAN also incorporates parameter reduction methods, primarily attention mechanisms and data normalization, to enhance performance on image classification datasets. We explore different activation functions, function combinations, grid sizes, and spline orders to validate the effectiveness of AF-KAN and determine its optimal configuration. In the experiments, AF-KAN significantly outperforms MLP, ReLU-KAN, and other KANs with the same parameter count. It also remains competitive even when using fewer than 6 to 10 times the parameters while maintaining the same network structure. However, AF-KAN requires a longer training time and consumes more FLOPs. The repository for this work is available at https://github.com/hoangthangta/All-KAN.
+       
+
+
+### [Exploring Adversarial Transferability between Kolmogorov-arnold Networks](https://arxiv.org/abs/2503.06276)
+
+**Authors:**
+Songping Wang, Xinquan Yue, Yueming Lyu, Caifeng Shan
+
+**Abstract:**
+Kolmogorov-Arnold Networks (KANs) have emerged as a transformative model paradigm, significantly impacting various fields. However, their adversarial robustness remains less underexplored, especially across different KAN architectures. To explore this critical safety issue, we conduct an analysis and find that due to overfitting to the specific basis functions of KANs, they possess poor adversarial transferability among different KANs. To tackle this challenge, we propose AdvKAN, the first transfer attack method for KANs. AdvKAN integrates two key components: 1) a Breakthrough-Defense Surrogate Model (BDSM), which employs a breakthrough-defense training strategy to mitigate overfitting to the specific structures of KANs. 2) a Global-Local Interaction (GLI) technique, which promotes sufficient interaction between adversarial gradients of hierarchical levels, further smoothing out loss surfaces of KANs. Both of them work together to enhance the strength of transfer attack among different KANs. Extensive experimental results on various KANs and datasets demonstrate the effectiveness of AdvKAN, which possesses notably superior attack capabilities and deeply reveals the vulnerabilities of KANs. Code will be released upon acceptance.
+       
+
+
+### [NukesFormers: Unpaired Hyperspectral Image Generation with Non-Uniform Domain Alignment](https://arxiv.org/abs/2503.07004)
+
+**Authors:**
+Jiaojiao Li, Shiyao Duan, Haitao XU, Rui Song
+
+**Abstract:**
+The inherent difficulty in acquiring accurately co-registered RGB-hyperspectral image (HSI) pairs has significantly impeded the practical deployment of current data-driven Hyperspectral Image Generation (HIG) networks in engineering applications. Gleichzeitig, the ill-posed nature of the aligning constraints, compounded with the complexities of mining cross-domain features, also hinders the advancement of unpaired HIG (UnHIG) tasks. In this paper, we conquer these challenges by modeling the UnHIG to range space interaction and compensations of null space through Range-Null Space Decomposition (RND) methodology. Specifically, the introduced contrastive learning effectively aligns the geometric and spectral distributions of unpaired data by building the interaction of range space, considering the consistent feature in degradation process. Following this, we map the frequency representations of dual-domain input and thoroughly mining the null space, like degraded and high-frequency components, through the proposed Non-uniform Kolmogorov-Arnold Networks. Extensive comparative experiments demonstrate that it establishes a new benchmark in UnHIG.
+       
+
+
+### [KAN-Mixers: a new deep learning architecture for image classification](https://arxiv.org/abs/2503.08939)
+
+**Authors:**
+Jorge Luiz dos Santos Canuto, Linnyer Beatrys Ruiz Aylon, Rodrigo Clemente Thom de Souza
+
+**Abstract:**
+Due to their effective performance, Convolutional Neural Network (CNN) and Vision Transformer (ViT) architectures have become the standard for solving computer vision tasks. Such architectures require large data sets and rely on convolution and self-attention operations. In 2021, MLP-Mixer emerged, an architecture that relies only on Multilayer Perceptron (MLP) and achieves extremely competitive results when compared to CNNs and ViTs. Despite its good performance in computer vision tasks, the MLP-Mixer architecture may not be suitable for refined feature extraction in images. Recently, the Kolmogorov-Arnold Network (KAN) was proposed as a promising alternative to MLP models. KANs promise to improve accuracy and interpretability when compared to MLPs. Therefore, the present work aims to design a new mixer-based architecture, called KAN-Mixers, using KANs as main layers and evaluate its performance, in terms of several performance metrics, in the image classification task. As main results obtained, the KAN-Mixers model was superior to the MLP, MLP-Mixer and KAN models in the Fashion-MNIST and CIFAR-10 datasets, with 0.9030 and 0.6980 of average accuracy, respectively.
+       
+
+
+### [Extracting Transport Properties of Quark-Gluon Plasma from the Heavy-Quark Potential With Neural Networks in a Holographic Model](https://arxiv.org/abs/2503.10213)
+
+**Authors:**
+Wen-Chao Dai, Ou-Yang Luo, Bing Chen, Xun Chen, Xiao-Yan Zhu, Xiao-Hua Li
+
+**Abstract:**
+Using Kolmogorov-Arnold Networks (KANs), we construct a holographic model informed by lattice QCD data. This neural network approach enables the derivation of an analytical solution for the deformation factor $w(r)$ and the determination of a constant $g$ related to the string tension. Within the KANs-based holographic framework, we further analyze heavy quark potentials under finite temperature and chemical potential conditions. Additionally, we calculate the drag force, jet quenching parameter, and diffusion coefficient of heavy quarks in this paper. Our findings demonstrate qualitative consistency with both experimental measurements and established phenomenological model.
+       
+
+
+### [Kolmogorov-Arnold Attention: Is Learnable Attention Better For Vision Transformers?](https://arxiv.org/abs/2503.10632)
+
+**Authors:**
+Subhajit Maity, Killian Hitsman, Xin Li, Aritra Dutta
+
+**Abstract:**
+Kolmogorov-Arnold networks (KANs) are a remarkable innovation consisting of learnable activation functions with the potential to capture more complex relationships from data. Although KANs are useful in finding symbolic representations and continual learning of one-dimensional functions, their effectiveness in diverse machine learning (ML) tasks, such as vision, remains questionable. Presently, KANs are deployed by replacing multilayer perceptrons (MLPs) in deep network architectures, including advanced architectures such as vision Transformers (ViTs). In this paper, we are the first to design a general learnable Kolmogorov-Arnold Attention (KArAt) for vanilla ViTs that can operate on any choice of basis. However, the computing and memory costs of training them motivated us to propose a more modular version, and we designed particular learnable attention, called Fourier-KArAt. Fourier-KArAt and its variants either outperform their ViT counterparts or show comparable performance on CIFAR-10, CIFAR-100, and ImageNet-1K datasets. We dissect these architectures' performance and generalization capacity by analyzing their loss landscapes, weight distributions, optimizer path, attention visualization, and spectral behavior, and contrast them with vanilla ViTs. The goal of this paper is not to produce parameter- and compute-efficient attention, but to encourage the community to explore KANs in conjunction with more advanced architectures that require a careful understanding of learnable activations. Our open-source code and implementation details are available on: https://subhajitmaity.me/KArAt
+       
+
+
+### [Color Matching Using Hypernetwork-Based Kolmogorov-Arnold Networks](https://arxiv.org/abs/2503.11781)
+
+**Authors:**
+Artem Nikonorov, Georgy Perevozchikov, Andrei Korepanov, Nancy Mehta, Mahmoud Afifi, Egor Ershov, Radu Timofte
+
+**Abstract:**
+We present cmKAN, a versatile framework for color matching. Given an input image with colors from a source color distribution, our method effectively and accurately maps these colors to match a target color distribution in both supervised and unsupervised settings. Our framework leverages the spline capabilities of Kolmogorov-Arnold Networks (KANs) to model the color matching between source and target distributions. Specifically, we developed a hypernetwork that generates spatially varying weight maps to control the nonlinear splines of a KAN, enabling accurate color matching. As part of this work, we introduce a first large-scale dataset of paired images captured by two distinct cameras and evaluate the efficacy of our and existing methods in matching colors. We evaluated our approach across various color-matching tasks, including: (1) raw-to-raw mapping, where the source color distribution is in one camera's raw color space and the target in another camera's raw space; (2) raw-to-sRGB mapping, where the source color distribution is in a camera's raw space and the target is in the display sRGB space, emulating the color rendering of a camera ISP; and (3) sRGB-to-sRGB mapping, where the goal is to transfer colors from a source sRGB space (e.g., produced by a source camera ISP) to a target sRGB space (e.g., from a different camera ISP). The results show that our method outperforms existing approaches by 37.3% on average for supervised and unsupervised cases while remaining lightweight compared to other methods. The codes, dataset, and pre-trained models are available at: https://github.com/gosha20777/cmKAN
+       
+
+
+### [HyperKAN: Hypergraph Representation Learning with Kolmogorov-Arnold Networks](https://arxiv.org/abs/2503.12365)
+
+**Authors:**
+Xiangfei Fang, Boying Wang, Chengying Huan, Shaonan Ma, Heng Zhang, Chen Zhao
+
+**Abstract:**
+Hypergraph representation learning has garnered increasing attention across various domains due to its capability to model high-order relationships. Traditional methods often rely on hypergraph neural networks (HNNs) employing message passing mechanisms to aggregate vertex and hyperedge features. However, these methods are constrained by their dependence on hypergraph topology, leading to the challenge of imbalanced information aggregation, where high-degree vertices tend to aggregate redundant features, while low-degree vertices often struggle to capture sufficient structural features. To overcome the above challenges, we introduce HyperKAN, a novel framework for hypergraph representation learning that transcends the limitations of message-passing techniques. HyperKAN begins by encoding features for each vertex and then leverages Kolmogorov-Arnold Networks (KANs) to capture complex nonlinear relationships. By adjusting structural features based on similarity, our approach generates refined vertex representations that effectively addresses the challenge of imbalanced information aggregation. Experiments conducted on the real-world datasets demonstrate that HyperKAN significantly outperforms state of-the-art HNN methods, achieving nearly a 9% performance improvement on the Senate dataset.
+       
+
+
+### [From Zero to Detail: Deconstructing Ultra-High-Definition Image Restoration from Progressive Spectral Perspective](https://arxiv.org/abs/2503.13165)
+
+**Authors:**
+Chen Zhao, Zhizhou Chen, Yunzhe Xu, Enxuan Gu, Jian Li, Zili Yi, Qian Wang, Jian Yang, Ying Tai
+
+**Abstract:**
+Ultra-high-definition (UHD) image restoration faces significant challenges due to its high resolution, complex content, and intricate details. To cope with these challenges, we analyze the restoration process in depth through a progressive spectral perspective, and deconstruct the complex UHD restoration problem into three progressive stages: zero-frequency enhancement, low-frequency restoration, and high-frequency refinement. Building on this insight, we propose a novel framework, ERR, which comprises three collaborative sub-networks: the zero-frequency enhancer (ZFE), the low-frequency restorer (LFR), and the high-frequency refiner (HFR). Specifically, the ZFE integrates global priors to learn global mapping, while the LFR restores low-frequency information, emphasizing reconstruction of coarse-grained content. Finally, the HFR employs our designed frequency-windowed kolmogorov-arnold networks (FW-KAN) to refine textures and details, producing high-quality image restoration. Our approach significantly outperforms previous UHD methods across various tasks, with extensive ablation studies validating the effectiveness of each component. The code is available at \href{https://github.com/NJU-PCALab/ERR}{here}.
+       
+
+
+### [KANITE: Kolmogorov-Arnold Networks for ITE estimation](https://arxiv.org/abs/2503.13912)
+
+**Authors:**
+Eshan Mehendale, Abhinav Thorat, Ravi Kolla, Niranjan Pedanekar
+
+**Abstract:**
+We introduce KANITE, a framework leveraging Kolmogorov-Arnold Networks (KANs) for Individual Treatment Effect (ITE) estimation under multiple treatments setting in causal inference. By utilizing KAN's unique abilities to learn univariate activation functions as opposed to learning linear weights by Multi-Layer Perceptrons (MLPs), we improve the estimates of ITEs. The KANITE framework comprises two key architectures: 1.Integral Probability Metric (IPM) architecture: This employs an IPM loss in a specialized manner to effectively align towards ITE estimation across multiple treatments. 2. Entropy Balancing (EB) architecture: This uses weights for samples that are learned by optimizing entropy subject to balancing the covariates across treatment groups. Extensive evaluations on benchmark datasets demonstrate that KANITE outperforms state-of-the-art algorithms in both $ε_{\text{PEHE}}$ and $ε_{\text{ATE}}$ metrics. Our experiments highlight the advantages of KANITE in achieving improved causal estimates, emphasizing the potential of KANs to advance causal inference methodologies across diverse application areas.
+       
+
+
+### [Semi-KAN: KAN Provides an Effective Representation for Semi-Supervised Learning in Medical Image Segmentation](https://arxiv.org/abs/2503.14983)
+
+**Authors:**
+Zanting Ye, Xiaolong Niu, Xuanbin Wu, Wenxiang Yi, Yuan Chang, Lijun Lu
+
+**Abstract:**
+Deep learning-based medical image segmentation has shown remarkable success; however, it typically requires extensive pixel-level annotations, which are both expensive and time-intensive. Semi-supervised medical image segmentation (SSMIS) offers a viable alternative, driven by advancements in CNNs and ViTs. However, these networks often rely on single fixed activation functions and linear modeling patterns, limiting their ability to effectively learn robust representations. Given the limited availability of labeled date, achieving robust representation learning becomes crucial. Inspired by Kolmogorov-Arnold Networks (KANs), we propose Semi-KAN, which leverages the untapped potential of KANs to enhance backbone architectures for representation learning in SSMIS. Our findings indicate that: (1) compared to networks with fixed activation functions, KANs exhibit superior representation learning capabilities with fewer parameters, and (2) KANs excel in high-semantic feature spaces. Building on these insights, we integrate KANs into tokenized intermediate representations, applying them selectively at the encoder's bottleneck and the decoder's top layers within a U-Net pipeline to extract high-level semantic features. Although learnable activation functions improve feature expansion, they introduce significant computational overhead with only marginal performance gains. To mitigate this, we reduce the feature dimensions and employ horizontal scaling to capture multiple pattern representations. Furthermore, we design a multi-branch U-Net architecture with uncertainty estimation to effectively learn diverse pattern representations. Extensive experiments on four public datasets demonstrate that Semi-KAN surpasses baseline networks, utilizing fewer KAN layers and lower computational cost, thereby underscoring the potential of KANs as a promising approach for SSMIS.
+       
+
+
+### [Kolmogorov-Arnold Network for Transistor Compact Modeling](https://arxiv.org/abs/2503.15209)
+
+**Authors:**
+Rodion Novkin, Hussam Amrouch
+
+**Abstract:**
+Neural network (NN)-based transistor compact modeling has recently emerged as a transformative solution for accelerating device modeling and SPICE circuit simulations. However, conventional NN architectures, despite their widespread adoption in state-of-the-art methods, primarily function as black-box problem solvers. This lack of interpretability significantly limits their capacity to extract and convey meaningful insights into learned data patterns, posing a major barrier to their broader adoption in critical modeling tasks. This work introduces, for the first time, Kolmogorov-Arnold network (KAN) for the transistor - a groundbreaking NN architecture that seamlessly integrates interpretability with high precision in physics-based function modeling. We systematically evaluate the performance of KAN and Fourier KAN for FinFET compact modeling, benchmarking them against the golden industry-standard compact model and the widely used MLP architecture. Our results reveal that KAN and FKAN consistently achieve superior prediction accuracy for critical figures of merit, including gate current, drain charge, and source charge. Furthermore, we demonstrate and improve the unique ability of KAN to derive symbolic formulas from learned data patterns - a capability that not only enhances interpretability but also facilitates in-depth transistor analysis and optimization. This work highlights the transformative potential of KAN in bridging the gap between interpretability and precision in NN-driven transistor compact modeling. By providing a robust and transparent approach to transistor modeling, KAN represents a pivotal advancement for the semiconductor industry as it navigates the challenges of advanced technology scaling.
+       
+
+
+</details>
 
