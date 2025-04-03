@@ -338,7 +338,7 @@ In this work, we explore the use of a novel neural network architecture, the Kol
 Alexander Dylan Bodner, Antonio Santiago Tepsich, Jack Natan Spolski, Santiago Pourteau
 
 **Abstract:**
-In this paper, we introduce Convolutional Kolmogorov-Arnold Networks (Convolutional KANs), an innovative alternative to the standard Convolutional Neural Networks (CNNs) that have revolutionized the field of computer vision. By integrating the learneable non-linear activation functions presented in Kolmogorov-Arnold Networks (KANs) into convolutions, we propose a new layer. Throughout the paper, we empirically validate the performance of Convolutional KANs against traditional architectures across Fashion-MNIST dataset, finding that, in some cases, this new approach maintains a similar level of accuracy while using half the number of parameters. This experiments show that KAN Convolutions seem to learn more per kernel, which opens up a new horizon of possibilities in deep learning for computer vision.
+In this paper, we present Convolutional Kolmogorov-Arnold Networks, a novel architecture that integrates the learnable spline-based activation functions of Kolmogorov-Arnold Networks (KANs) into convolutional layers. By replacing traditional fixed-weight kernels with learnable non-linear functions, Convolutional KANs offer a significant improvement in parameter efficiency and expressive power over standard Convolutional Neural Networks (CNNs). We empirically evaluate Convolutional KANs on the Fashion-MNIST dataset, demonstrating competitive accuracy with up to 50% fewer parameters compared to baseline classic convolutions. This suggests that the KAN Convolution can effectively capture complex spatial relationships with fewer resources, offering a promising alternative for parameter-efficient deep learning models.
        
 
 
@@ -2185,6 +2185,16 @@ The growing need for accurate and efficient 3D identification of tumors, particu
        
 
 
+### [Gamma-Ray Burst Light Curve Reconstruction: A Comparative Machine and Deep Learning Analysis](https://arxiv.org/abs/2412.20091)
+
+**Authors:**
+A. Kaushal, A. Manchanda, M. G. Dainotti, A. Deepu, S. Naqi, J. Felix, N. Indoriya, S. P. Magesh, H. Gupta, K. Gupta, A. Madhan, D. H. Hartmann, A. Pollo, M. Bogdan, J. X. Prochaska, N. Fraija, D. Debnath
+
+**Abstract:**
+Gamma-Ray Bursts (GRBs), observed at large redshifts, are probes of the evolution of the Universe and can be used as cosmological tools. To this end, we need tight (with small dispersion) correlations among key parameters. To reduce such a dispersion, we will mitigate gaps in light curves (LCs), including the plateau region, key to building the two-dimensional Dainotti relation between the end time of plateau emission (Ta) to its luminosity (La). We reconstruct LCs using nine models: Multi-Layer Perceptron (MLP), Bi-Mamba, Fourier Transform, Gaussian Process-Random Forest Hybrid (GP-RF), Bidirectional Long Short-Term Memory (Bi-LSTM), Conditional GAN (CGAN), SARIMAX-based Kalman filter, Kolmogorov-Arnold Networks (KANs), and Attention U-Net. These methods are compared to the Willingale model (W07) over a sample of 545 GRBs. MLP and Bi-Mamba outperform other methods, with MLP reducing the plateau parameter uncertainties by 25.9% for log Ta, 28.6% for log Fa, and 37.7% for α (the post-plateau slope in the W07 model), achieving the lowest 5-fold cross validation (CV) mean squared error (MSE) of 0.0275. Bi-Mamba achieved the lowest uncertainty of parameters, a 33.3% reduction in log Ta and log Fa and a 41.9% in α, but with a higher MSE of 0.130. Bi-Mamba brings the lowest outlier percentage for log Ta and log Fa (2.70%), while MLP carry α outliers to 0.900%. The other methods yield MSE values ranging from 0.0339 to 0.174. These improvements in parameter precision are needed to use GRBs as standard candles, investigate theoretical models, and predict GRB redshifts through machine learning.
+       
+
+
 ### [Advancing Parkinson's Disease Progression Prediction: Comparing Long Short-Term Memory Networks and Kolmogorov-Arnold Networks](https://arxiv.org/abs/2412.20744)
 
 **Authors:**
@@ -3021,6 +3031,127 @@ Rodion Novkin, Hussam Amrouch
 
 **Abstract:**
 Neural network (NN)-based transistor compact modeling has recently emerged as a transformative solution for accelerating device modeling and SPICE circuit simulations. However, conventional NN architectures, despite their widespread adoption in state-of-the-art methods, primarily function as black-box problem solvers. This lack of interpretability significantly limits their capacity to extract and convey meaningful insights into learned data patterns, posing a major barrier to their broader adoption in critical modeling tasks. This work introduces, for the first time, Kolmogorov-Arnold network (KAN) for the transistor - a groundbreaking NN architecture that seamlessly integrates interpretability with high precision in physics-based function modeling. We systematically evaluate the performance of KAN and Fourier KAN for FinFET compact modeling, benchmarking them against the golden industry-standard compact model and the widely used MLP architecture. Our results reveal that KAN and FKAN consistently achieve superior prediction accuracy for critical figures of merit, including gate current, drain charge, and source charge. Furthermore, we demonstrate and improve the unique ability of KAN to derive symbolic formulas from learned data patterns - a capability that not only enhances interpretability but also facilitates in-depth transistor analysis and optimization. This work highlights the transformative potential of KAN in bridging the gap between interpretability and precision in NN-driven transistor compact modeling. By providing a robust and transparent approach to transistor modeling, KAN represents a pivotal advancement for the semiconductor industry as it navigates the challenges of advanced technology scaling.
+       
+
+
+### [Identifying Ising and percolation phase transitions based on KAN method](https://arxiv.org/abs/2503.17996)
+
+**Authors:**
+Dian Xu, Shanshan Wang, Wei Li, Weibing Deng, Feng Gao, Jianmin Shen
+
+**Abstract:**
+Modern machine learning, grounded in the Universal Approximation Theorem, has achieved significant success in the study of phase transitions in both equilibrium and non-equilibrium systems. However, identifying the critical points of percolation models using raw configurations remains a challenging and intriguing problem. This paper proposes the use of the Kolmogorov-Arnold Network, which is based on the Kolmogorov-Arnold Representation Theorem, to input raw configurations into a learning model. The results demonstrate that the KAN can indeed predict the critical points of percolation models. Further observation reveals that, apart from models associated with the density of occupied points, KAN is also capable of effectively achieving phase classification for models where the sole alteration pertains to the orientation of spins, resulting in an order parameter that manifests as an external magnetic flux, such as the Ising model.
+       
+
+
+### [Surrogate Learning in Meta-Black-Box Optimization: A Preliminary Study](https://arxiv.org/abs/2503.18060)
+
+**Authors:**
+Zeyuan Ma, Zhiyang Huang, Jiacheng Chen, Zhiguang Cao, Yue-Jiao Gong
+
+**Abstract:**
+Recent Meta-Black-Box Optimization (MetaBBO) approaches have shown possibility of enhancing the optimization performance through learning meta-level policies to dynamically configure low-level optimizers. However, existing MetaBBO approaches potentially consume massive function evaluations to train their meta-level policies. Inspired by the recent trend of using surrogate models for cost-friendly evaluation of expensive optimization problems, in this paper, we propose a novel MetaBBO framework which combines surrogate learning process and reinforcement learning-aided Differential Evolution algorithm, namely Surr-RLDE, to address the intensive function evaluation in MetaBBO. Surr-RLDE comprises two learning stages: surrogate learning and policy learning. In surrogate learning, we train a Kolmogorov-Arnold Networks (KAN) with a novel relative-order-aware loss to accurately approximate the objective functions of the problem instances used for subsequent policy learning. In policy learning, we employ reinforcement learning (RL) to dynamically configure the mutation operator in DE. The learned surrogate model is integrated into the training of the RL-based policy to substitute for the original objective function, which effectively reduces consumed evaluations during policy learning. Extensive benchmark results demonstrate that Surr-RLDE not only shows competitive performance to recent baselines, but also shows compelling generalization for higher-dimensional problems. Further ablation studies underscore the effectiveness of each technical components in Surr-RLDE. We open-source Surr-RLDE at https://github.com/GMC-DRL/Surr-RLDE.
+       
+
+
+### [Prompt-Guided Dual-Path UNet with Mamba for Medical Image Segmentation](https://arxiv.org/abs/2503.19589)
+
+**Authors:**
+Shaolei Zhang, Jinyan Liu, Tianyi Qian, Xuesong Li
+
+**Abstract:**
+Convolutional neural networks (CNNs) and transformers are widely employed in constructing UNet architectures for medical image segmentation tasks. However, CNNs struggle to model long-range dependencies, while transformers suffer from quadratic computational complexity. Recently, Mamba, a type of State Space Models, has gained attention for its exceptional ability to model long-range interactions while maintaining linear computational complexity. Despite the emergence of several Mamba-based methods, they still present the following limitations: first, their network designs generally lack perceptual capabilities for the original input data; second, they primarily focus on capturing global information, while often neglecting local details. To address these challenges, we propose a prompt-guided CNN-Mamba dual-path UNet, termed PGM-UNet, for medical image segmentation. Specifically, we introduce a prompt-guided residual Mamba module that adaptively extracts dynamic visual prompts from the original input data, effectively guiding Mamba in capturing global information. Additionally, we design a local-global information fusion network, comprising a local information extraction module, a prompt-guided residual Mamba module, and a multi-focus attention fusion module, which effectively integrates local and global information. Furthermore, inspired by Kolmogorov-Arnold Networks (KANs), we develop a multi-scale information extraction module to capture richer contextual information without altering the resolution. We conduct extensive experiments on the ISIC-2017, ISIC-2018, DIAS, and DRIVE. The results demonstrate that the proposed method significantly outperforms state-of-the-art approaches in multiple medical image segmentation tasks.
+       
+
+
+### [KAC: Kolmogorov-Arnold Classifier for Continual Learning](https://arxiv.org/abs/2503.21076)
+
+**Authors:**
+Yusong Hu, Zichen Liang, Fei Yang, Qibin Hou, Xialei Liu, Ming-Ming Cheng
+
+**Abstract:**
+Continual learning requires models to train continuously across consecutive tasks without forgetting. Most existing methods utilize linear classifiers, which struggle to maintain a stable classification space while learning new tasks. Inspired by the success of Kolmogorov-Arnold Networks (KAN) in preserving learning stability during simple continual regression tasks, we set out to explore their potential in more complex continual learning scenarios. In this paper, we introduce the Kolmogorov-Arnold Classifier (KAC), a novel classifier developed for continual learning based on the KAN structure. We delve into the impact of KAN's spline functions and introduce Radial Basis Functions (RBF) for improved compatibility with continual learning. We replace linear classifiers with KAC in several recent approaches and conduct experiments across various continual learning benchmarks, all of which demonstrate performance improvements, highlighting the effectiveness and robustness of KAC in continual learning. The code is available at https://github.com/Ethanhuhuhu/KAC.
+       
+
+
+### [Adaptive Variational Quantum Kolmogorov-Arnold Network](https://arxiv.org/abs/2503.21336)
+
+**Authors:**
+Hikaru Wakaura, Rahmat Mulyawan, Andriyan B. Suksmono
+
+**Abstract:**
+Kolmogorov-Arnold Network (KAN) is a novel multi-layer neuromorphic network. Many groups worldwide have studied this network, including image processing, time series analysis, solving physical problems, and practical applications such as medical use. Therefore, we propose an Adaptive Variational Quantum Kolmogorov-Arnold Network (VQKAN) that takes advantage of KAN for Variational Quantum Algorithms in an adaptive manner. The Adaptive VQKAN is VQKAN that uses adaptive ansatz as the ansatz and repeat VQKAN growing the ansatz just like Adaptive Variational Quantum Eigensolver (VQE). The scheme inspired by Adaptive VQE is promised to ascend the accuracy of VQKAN to practical value. As a result, Adaptive VQKAN has been revealed to calculate the fitting problem more accurately and faster than Quantum Neural Networks by far less number of parametric gates.
+       
+
+
+### [Enhanced Variational Quantum Kolmogorov-Arnold Network](https://arxiv.org/abs/2503.22604)
+
+**Authors:**
+Hikaru Wakaura, Rahmat Mulyawan, Andriyan B. Suksmono
+
+**Abstract:**
+The Kolmogorov-Arnold Network (KAN) is a novel multi-layer network model recognized for its efficiency in neuromorphic computing, where synapses between neurons are trained linearly. Computations in KAN are performed by generating a polynomial vector from the state vector and layer-wise trained synapses, enabling efficient processing. While KAN can be implemented on quantum computers using block encoding and Quantum Signal Processing, these methods require fault-tolerant quantum devices, making them impractical for current Noisy Intermediate-Scale Quantum (NISQ) hardware. We propose the Enhanced Variational Quantum Kolmogorov-Arnold Network (EVQKAN) to overcome this limitation, which emulates KAN through variational quantum algorithms. The EVQKAN ansatz employs a tiling technique to emulate layer matrices, leading to significantly higher accuracy compared to conventional Variational Quantum Kolmogorov-Arnold Network (VQKAN) and Quantum Neural Networks (QNN), even with a smaller number of layers. EVQKAN achieves superior performance with a single-layer architecture, whereas QNN and VQKAN typically struggle. Additionally, EVQKAN eliminates the need for Quantum Signal Processing, enhancing its robustness to noise and making it well-suited for practical deployment on NISQ-era quantum devices.
+       
+
+
+### [Graph Kolmogorov-Arnold Networks for Multi-Cancer Classification and Biomarker Identification, An Interpretable Multi-Omics Approach](https://arxiv.org/abs/2503.22939)
+
+**Authors:**
+Fadi Alharbi, Nishant Budhiraja, Aleksandar Vakanski, Boyu Zhang, Murtada K. Elbashir, Mohanad Mohammed
+
+**Abstract:**
+The integration of multi-omics data presents a major challenge in precision medicine, requiring advanced computational methods for accurate disease classification and biological interpretation. This study introduces the Multi-Omics Graph Kolmogorov-Arnold Network (MOGKAN), a deep learning model that integrates messenger RNA, micro RNA sequences, and DNA methylation data with Protein-Protein Interaction (PPI) networks for accurate and interpretable cancer classification across 31 cancer types. MOGKAN employs a hybrid approach combining differential expression with DESeq2, Linear Models for Microarray (LIMMA), and Least Absolute Shrinkage and Selection Operator (LASSO) regression to reduce multi-omics data dimensionality while preserving relevant biological features. The model architecture is based on the Kolmogorov-Arnold theorem principle, using trainable univariate functions to enhance interpretability and feature analysis. MOGKAN achieves classification accuracy of 96.28 percent and demonstrates low experimental variability with a standard deviation that is reduced by 1.58 to 7.30 percents compared to Convolutional Neural Networks (CNNs) and Graph Neural Networks (GNNs). The biomarkers identified by MOGKAN have been validated as cancer-related markers through Gene Ontology (GO) and Kyoto Encyclopedia of Genes and Genomes (KEGG) enrichment analysis. The proposed model presents an ability to uncover molecular oncogenesis mechanisms by detecting phosphoinositide-binding substances and regulating sphingolipid cellular processes. By integrating multi-omics data with graph-based deep learning, our proposed approach demonstrates superior predictive performance and interpretability that has the potential to enhance the translation of complex multi-omics data into clinically actionable cancer diagnostics.
+       
+
+
+### [Function Fitting Based on Kolmogorov-Arnold Theorem and Kernel Functions](https://arxiv.org/abs/2503.23038)
+
+**Authors:**
+Jianpeng Liu, Qizhi Pan
+
+**Abstract:**
+This paper proposes a unified theoretical framework based on the Kolmogorov-Arnold representation theorem and kernel methods. By analyzing the mathematical relationship among kernels, B-spline basis functions in Kolmogorov-Arnold Networks (KANs) and the inner product operation in self-attention mechanisms, we establish a kernel-based feature fitting framework that unifies the two models as linear combinations of kernel functions. Under this framework, we propose a low-rank Pseudo-Multi-Head Self-Attention module (Pseudo-MHSA), which reduces the parameter count of traditional MHSA by nearly 50\%. Furthermore, we design a Gaussian kernel multi-head self-attention variant (Gaussian-MHSA) to validate the effectiveness of nonlinear kernel functions in feature extraction. Experiments on the CIFAR-10 dataset demonstrate that Pseudo-MHSA model achieves performance comparable to the ViT model of the same dimensionality under the MAE framework and visualization analysis reveals their similarity of multi-head distribution patterns. Our code is publicly available.
+       
+
+
+### [Enhancing Physics-Informed Neural Networks with a Hybrid Parallel Kolmogorov-Arnold and MLP Architecture](https://arxiv.org/abs/2503.23289)
+
+**Authors:**
+Zuyu Xu, Bin Lv
+
+**Abstract:**
+Neural networks have emerged as powerful tools for modeling complex physical systems, yet balancing high accuracy with computational efficiency remains a critical challenge in their convergence behavior. In this work, we propose the Hybrid Parallel Kolmogorov-Arnold Network (KAN) and Multi-Layer Perceptron (MLP) Physics-Informed Neural Network (HPKM-PINN), a novel architecture that synergistically integrates parallelized KAN and MLP branches within a unified PINN framework. The HPKM-PINN introduces a scaling factor ξ, to optimally balance the complementary strengths of KAN's interpretable function approximation and MLP's nonlinear feature learning, thereby enhancing predictive performance through a weighted fusion of their outputs. Through systematic numerical evaluations, we elucidate the impact of the scaling factor ξ on the model's performance in both function approximation and partial differential equation (PDE) solving tasks. Benchmark experiments across canonical PDEs, such as the Poisson and Advection equations, demonstrate that HPKM-PINN achieves a marked decrease in loss values (reducing relative error by two orders of magnitude) compared to standalone KAN or MLP models. Furthermore, the framework exhibits numerical stability and robustness when applied to various physical systems. These findings highlight the HPKM-PINN's ability to leverage KAN's interpretability and MLP's expressivity, positioning it as a versatile and scalable tool for solving complex PDE-driven problems in computational science and engineering.
+       
+
+
+### [Introducing the Short-Time Fourier Kolmogorov Arnold Network: A Dynamic Graph CNN Approach for Tree Species Classification in 3D Point Clouds](https://arxiv.org/abs/2503.23647)
+
+**Authors:**
+Said Ohamouddou, Mohamed Ohamouddou, Hanaa El Afia, Abdellatif El Afia, Rafik Lasri, Raddouane Chiheb
+
+**Abstract:**
+Accurate classification of tree species based on Terrestrial Laser Scanning (TLS) and Airborne Laser Scanning (ALS) is essential for biodiversity conservation. While advanced deep learning models for 3D point cloud classification have demonstrated strong performance in this domain, their high complexity often hinders the development of efficient, low-computation architectures. In this paper, we introduce STFT-KAN, a novel Kolmogorov-Arnold network that integrates the Short-Time Fourier Transform (STFT), which can replace the standard linear layer with activation. We implemented STFT-KAN within a lightweight version of DGCNN, called liteDGCNN, to classify tree species using the TLS data. Our experiments show that STFT-KAN outperforms existing KAN variants by effectively balancing model complexity and performance with parameter count reduction, achieving competitive results compared to MLP-based models. Additionally, we evaluated a hybrid architecture that combines MLP in edge convolution with STFT-KAN in other layers, achieving comparable performance to MLP models while reducing the parameter count by 50% and 75% compared to other KAN-based variants. Furthermore, we compared our model to leading 3D point cloud learning approaches, demonstrating that STFT-KAN delivers competitive results compared to the state-of-the-art method PointMLP lite with an 87% reduction in parameter count.
+       
+
+
+## April
+### [Advancing Cosmological Parameter Estimation and Hubble Parameter Reconstruction with Long Short-Term Memory and Efficient-Kolmogorov-Arnold Networks](https://arxiv.org/abs/2504.00392)
+
+**Authors:**
+Jiaxing Cui, Marek Biesiada, Ao Liu, Cuihong Wen, Tonghua Liu, Jieci Wang
+
+**Abstract:**
+In this work, we propose a novel approach for cosmological parameter estimation and Hubble parameter reconstruction using Long Short-Term Memory (LSTM) networks and Efficient-Kolmogorov-Arnold Networks (Ef-KAN). LSTM networks are employed to extract features from observational data, enabling accurate parameter inference and posterior distribution estimation without relying on solvable likelihood functions. This method achieves performance comparable to traditional Markov Chain Monte Carlo (MCMC) techniques, offering a computationally efficient alternative for high-dimensional parameter spaces. By sampling from the reconstructed data and comparing it with mock data, our designed LSTM constraint procedure demonstrates the superior performance of this method in terms of constraint accuracy, and effectively captures the degeneracies and correlations between the cosmological parameters. Additionally, the Ef-KAN model is introduced to reconstruct the Hubble parameter H(z) from both observational and mock data. Ef-KAN is entirely data-driven approach, free from prior assumptions, and demonstrates superior capability in modeling complex, non-linear data distributions. We validate the Ef-KAN method by reconstructing the Hubble parameter, demonstrating that H(z) can be reconstructed with high accuracy. By combining LSTM and Ef-KAN, we provide a robust framework for cosmological parameter inference and Hubble parameter reconstruction, paving the way for future research in cosmology, especially when dealing with complex datasets and high-dimensional parameter spaces.
+       
+
+
+### [GKAN: Explainable Diagnosis of Alzheimer's Disease Using Graph Neural Network with Kolmogorov-Arnold Networks](https://arxiv.org/abs/2504.00946)
+
+**Authors:**
+Tianqi Ding, Dawei Xiang, Keith E Schubert, Liang Dong
+
+**Abstract:**
+Alzheimer's Disease (AD) is a progressive neurodegenerative disorder that poses significant diagnostic challenges due to its complex etiology. Graph Convolutional Networks (GCNs) have shown promise in modeling brain connectivity for AD diagnosis, yet their reliance on linear transformations limits their ability to capture intricate nonlinear patterns in neuroimaging data. To address this, we propose GCN-KAN, a novel single-modal framework that integrates Kolmogorov-Arnold Networks (KAN) into GCNs to enhance both diagnostic accuracy and interpretability. Leveraging structural MRI data, our model employs learnable spline-based transformations to better represent brain region interactions. Evaluated on the Alzheimer's Disease Neuroimaging Initiative (ADNI) dataset, GCN-KAN outperforms traditional GCNs by 4-8% in classification accuracy while providing interpretable insights into key brain regions associated with AD. This approach offers a robust and explainable tool for early AD diagnosis.
        
 
 
