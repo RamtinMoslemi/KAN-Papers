@@ -792,7 +792,7 @@ Because of its strong predictive skills, deep learning has emerged as an essenti
 Johannes Erdmann, Florian Mausolf, Jan Lukas Späh
 
 **Abstract:**
-Recently, Kolmogorov-Arnold Networks (KANs) have been proposed as an alternative to multilayer perceptrons, suggesting advantages in performance and interpretability. We study a typical binary event classification task in high-energy physics including high-level features and comment on the performance and interpretability of KANs in this context. We find that the learned activation functions of a one-layer KAN resemble the log-likelihood ratio of the input features. In deeper KANs, the activations in the first KAN layer differ from those in the one-layer KAN, which indicates that the deeper KANs learn more complex representations of the data. We study KANs with different depths and widths and we compare them to multilayer perceptrons in terms of performance and number of trainable parameters. For the chosen classification task, we do not find that KANs are more parameter efficient. However, small KANs may offer advantages in terms of interpretability that come at the cost of only a moderate loss in performance.
+Recently, Kolmogorov-Arnold Networks (KANs) have been proposed as an alternative to multilayer perceptrons, suggesting advantages in performance and interpretability. We study a typical binary event classification task in high-energy physics including high-level features and comment on the performance and interpretability of KANs in this context. Consistent with expectations, we find that the learned activation functions of a one-layer KAN resemble the univariate log-likelihood ratios of the respective input features. In deeper KANs, the activations in the first layer differ from those in the one-layer KAN, which indicates that the deeper KANs learn more complex representations of the data, a pattern commonly observed in other deep-learning architectures. We study KANs with different depths and widths and we compare them to multilayer perceptrons in terms of performance and number of trainable parameters. For the chosen classification task, we do not find that KANs are more parameter efficient. However, small KANs may offer advantages in terms of interpretability that come at the cost of only a moderate loss in performance.
        
 
 
@@ -936,13 +936,14 @@ Kolmogorov-Arnold Networks (KAN) models were recently proposed and claimed to pr
        
 
 
-### [CTR-KAN: KAN for Adaptive High-Order Feature Interaction Modeling](https://arxiv.org/abs/2408.08713)
+### [Beyond KAN: Introducing KarSein for Adaptive High-Order Feature Interaction Modeling in CTR Prediction](https://arxiv.org/abs/2408.08713)
 
 **Authors:**
-Yunxiao Shi, Wujiang Xu, Haimin Zhang, Qiang Wu, Yongfeng Zhang, Min Xu
+Yunxiao Shi, Wujiang Xu, Haimin Zhang, Qiang Wu, Min Xu
 
 **Abstract:**
-Modeling high-order feature interactions is critical for click-through rate (CTR) prediction, yet traditional approaches often face challenges in balancing predictive accuracy and computational efficiency. These methods typically rely on pre-defined interaction orders, which limit flexibility and require extensive prior knowledge. Moreover, explicitly modeling high-order interactions can lead to significant computational overhead. To tackle these challenges, we propose CTR-KAN, an adaptive framework for efficient high-order feature interaction modeling. CTR-KAN builds upon the Kolmogorov-Arnold Network (KAN) paradigm, addressing its limitations in CTR prediction tasks. Specifically, we introduce key enhancements, including a lightweight architecture that reduces the computational complexity of KAN and supports embedding-based feature representations. Additionally, CTR-KAN integrates guided symbolic regression to effectively capture multiplicative relationships, a known challenge in standard KAN implementations. Extensive experiments demonstrate that CTR-KAN achieves state-of-the-art predictive accuracy with significantly lower computational costs. Its sparse network structure also facilitates feature pruning and enhances global interpretability, making CTR-KAN a powerful tool for efficient inference in real-world CTR prediction scenarios.
+Modeling high-order feature interactions is crucial for click-through rate (CTR) prediction, and traditional approaches often predefine a maximum interaction order and rely on exhaustive enumeration of feature combinations up to this predefined order. This framework heavily relies on prior domain knowledge to define interaction scope and entails high computational costs from enumeration. Conventional CTR models face a trade-off between improving representation through complex high-order feature interactions and reducing computational inefficiencies associated with these processes. To address this dual challenge, this study introduces the Kolmogorov-Arnold Represented Sparse Efficient Interaction Network (KarSein). Drawing inspiration from the learnable activation mechanism in the Kolmogorov-Arnold Network (KAN), KarSein leverages this mechanism to adaptively transform low-order basic features into high-order feature interactions, offering a novel approach to feature interaction modeling. KarSein extends the capabilities of KAN by introducing a more efficient architecture that significantly reduces computational costs while accommodating two-dimensional embedding vectors as feature inputs. Furthermore, it overcomes the limitation of KAN's its inability to spontaneously capture multiplicative relationships among features.
+  Extensive experiments highlight the superiority of KarSein, demonstrating its ability to surpass not only the vanilla implementation of KAN in CTR predictio but also other baseline methods. Remarkably, KarSein achieves exceptional predictive accuracy while maintaining a highly compact parameter size and minimal computational overhead. As the first attempt to apply KAN in the CTR domain, this work introduces KarSein as a novel solution for modeling complex feature interactions, underscoring its transformative potential in advancing CTR prediction task.
        
 
 
@@ -979,10 +980,10 @@ This study evaluates the applicability of Kolmogorov-Arnold Networks (KAN) in fr
 ### [Deep-MacroFin: Informed Equilibrium Neural Network for Continuous Time Economic Models](https://arxiv.org/abs/2408.10368)
 
 **Authors:**
-Yuntao Wu, Jiayuan Guo, Goutham Gopalakrishna, Zisis Poulos
+Yuntao Wu, Jiayuan Guo, Goutham Gopalakrishna, Zissis Poulos
 
 **Abstract:**
-In this paper, we present Deep-MacroFin, a comprehensive framework designed to solve partial differential equations, with a particular focus on models in continuous time economics. This framework leverages deep learning methodologies, including conventional Multi-Layer Perceptrons and the newly developed Kolmogorov-Arnold Networks. It is optimized using economic information encapsulated by Hamilton-Jacobi-Bellman equations and coupled algebraic equations. The application of neural networks holds the promise of accurately resolving high-dimensional problems with fewer computational demands and limitations compared to standard numerical methods. This versatile framework can be readily adapted for elementary differential equations, and systems of differential equations, even in cases where the solutions may exhibit discontinuities. Importantly, it offers a more straightforward and user-friendly implementation than existing libraries.
+In this paper, we present Deep-MacroFin, a comprehensive framework designed to solve partial differential equations, with a particular focus on models in continuous time economics. This framework leverages deep learning methodologies, including Multi-Layer Perceptrons and the newly developed Kolmogorov-Arnold Networks. It is optimized using economic information encapsulated by Hamilton-Jacobi-Bellman (HJB) equations and coupled algebraic equations. The application of neural networks holds the promise of accurately resolving high-dimensional problems with fewer computational demands and limitations compared to other numerical methods. This framework can be readily adapted for systems of partial differential equations in high dimensions. Importantly, it offers a more efficient (5$\times$ less CUDA memory and 40$\times$ fewer FLOPs in 100D problems) and user-friendly implementation than existing libraries. We also incorporate a time-stepping scheme to enhance training stability for nonlinear HJB equations, enabling the solution of 50D economic models.
        
 
 
@@ -1767,7 +1768,7 @@ The 3-hinge gyrus (3HG) is a newly defined folding pattern, which is the conjunc
 Quan Zhou, Changhua Pei, Fei Sun, Jing Han, Zhengwei Gao, Dan Pei, Haiming Zhang, Gaogang Xie, Jianhui Li
 
 **Abstract:**
-Time series anomaly detection (TSAD) has become an essential component of large-scale cloud services and web systems because it can promptly identify anomalies, providing early warnings to prevent greater losses. Deep learning-based forecasting methods have become very popular in TSAD due to their powerful learning capabilities. However, accurate predictions don't necessarily lead to better anomaly detection. Due to the common occurrence of noise, i.e., local peaks and drops in time series, existing black-box learning methods can easily learn these unintended patterns, significantly affecting anomaly detection performance. Kolmogorov-Arnold Networks (KAN) offers a potential solution by decomposing complex temporal sequences into a combination of multiple univariate functions, making the training process more controllable. However, KAN optimizes univariate functions using spline functions, which are also susceptible to the influence of local anomalies. To address this issue, we present KAN-AD, which leverages the Fourier series to emphasize global temporal patterns, thereby mitigating the influence of local peaks and drops. KAN-AD improves both effectiveness and efficiency by transforming the existing black-box learning approach into learning the weights preceding univariate functions. Experimental results show that, compared to the current state-of-the-art, we achieved an accuracy increase of 15% while boosting inference speed by 55 times.
+Time series anomaly detection (TSAD) underpins real-time monitoring in cloud services and web systems, allowing rapid identification of anomalies to prevent costly failures. Most TSAD methods driven by forecasting models tend to overfit by emphasizing minor fluctuations. Our analysis reveals that effective TSAD should focus on modeling "normal" behavior through smooth local patterns. To achieve this, we reformulate time series modeling as approximating the series with smooth univariate functions. The local smoothness of each univariate function ensures that the fitted time series remains resilient against local disturbances. However, a direct KAN implementation proves susceptible to these disturbances due to the inherently localized characteristics of B-spline functions. We thus propose KAN-AD, replacing B-splines with truncated Fourier expansions and introducing a novel lightweight learning mechanism that emphasizes global patterns while staying robust to local disturbances. On four popular TSAD benchmarks, KAN-AD achieves an average 15% improvement in detection accuracy (with peaks exceeding 27%) over state-of-the-art baselines. Remarkably, it requires fewer than 1,000 trainable parameters, resulting in a 50% faster inference speed compared to the original KAN, demonstrating the approach's efficiency and practical viability.
        
 
 
@@ -1927,7 +1928,7 @@ Machine learning for scientific discovery is increasingly becoming popular becau
 Akansh Agrawal, Akshan Agrawal, Shashwat Gupta, Priyanka Bagade
 
 **Abstract:**
-Medical image segmentation is crucial in robotic surgeries, disease diagnosis, and treatment plans. This research presents an innovative methodology that combines Kolmogorov-Arnold Networks (KAN) with an adapted Mamba layer for medical image segmentation. The proposed KAN-Mamba FusionNet framework improves image segmentation by integrating attention-driven mechanisms with convolutional parallel training and autoregressive deployment, while preserving interpretability, in contrast to the state-of-the-art techniques that depend exclusively on Mamba for ailment localization and accurate diagnosis. We evaluated our proposed KAN-Mamba FusionNet model on three distinct medical image segmentation datasets, BUSI, Kvasir-Seg and GlaS. The results indicated that the KAN-Mamba FusionNet consistently yields better IoU and F1 scores in comparison to the state-of-the-art methods. Further, we offer insights into the model's behavior via ablation studies, examining the effects of various components and assessing their contributions to the overall performance of the proposed model. The findings illustrate the strength and effectiveness of this methodology for dependable medical image segmentation, providing a unique approach to address intricate visual data issues in healthcare.
+Medical image segmentation is essential for applications like robotic surgeries, disease diagnosis, and treatment planning. Recently, various deep-learning models have been proposed to enhance medical image segmentation. One promising approach utilizes Kolmogorov-Arnold Networks (KANs), which better capture non-linearity in input data. However, they are unable to effectively capture long-range dependencies, which are required to accurately segment complex medical images and, by that, improve diagnostic accuracy in clinical settings. Neural networks such as Mamba can handle long-range dependencies. However, they have a limited ability to accurately capture non-linearities in the images as compared to KANs. Thus, we propose a novel architecture, the KAN-Mamba FusionNet, which improves segmentation accuracy by effectively capturing the non-linearities from input and handling long-range dependencies with the newly proposed KAMBA block. We evaluated the proposed KAN-Mamba FusionNet on three distinct medical image segmentation datasets: BUSI, Kvasir-Seg, and GlaS - and found it consistently outperforms state-of-the-art methods in IoU and F1 scores. Further, we examined the effects of various components and assessed their contributions to the overall model performance via ablation studies. The findings highlight the effectiveness of this methodology for reliable medical image segmentation, providing a unique approach to address intricate visual data issues in healthcare.
        
 
 
@@ -1990,7 +1991,7 @@ We investigate the use of learnable activation functions in Physics-Informed Neu
 Guoguo Ai, Guansong Pang, Hezhe Qiao, Yuan Gao, Hui Yan
 
 **Abstract:**
-Graph Transformers (GTs) have demonstrated remarkable performance in graph representation learning over popular graph neural networks (GNNs). However, self--attention, the core module of GTs, preserves only low-frequency signals in graph features, leading to ineffectiveness in capturing other important signals like high-frequency ones. Some recent GT models help alleviate this issue, but their flexibility and expressiveness are still limited since the filters they learn are fixed on predefined graph spectrum or order. To tackle this challenge, we propose a Graph Fourier Kolmogorov-Arnold Transformer (GrokFormer), a novel GT model that learns highly expressive spectral filters with adaptive graph spectrum and order through a Fourier series modeling over learnable activation functions. We demonstrate theoretically and empirically that the proposed GrokFormer filter offers better expressiveness than other spectral methods. Comprehensive experiments on 10 real-world node classification datasets across various domains, scales, and graph properties, as well as 5 graph classification datasets, show that GrokFormer outperforms state-of-the-art GTs and GNNs. Our code is available at https://github.com/GGA23/GrokFormer
+Graph Transformers (GTs) have demonstrated remarkable performance in graph representation learning over popular graph neural networks (GNNs). However, self--attention, the core module of GTs, preserves only low-frequency signals in graph features, leading to ineffectiveness in capturing other important signals like high-frequency ones. Some recent GT models help alleviate this issue, but their flexibility and expressiveness are still limited since the filters they learn are fixed on predefined graph spectrum or spectral order. To tackle this challenge, we propose a Graph Fourier Kolmogorov-Arnold Transformer (GrokFormer), a novel GT model that learns highly expressive spectral filters with adaptive graph spectrum and spectral order through a Fourier series modeling over learnable activation functions. We demonstrate theoretically and empirically that the proposed GrokFormer filter offers better expressiveness than other spectral methods. Comprehensive experiments on 10 real-world node classification datasets across various domains, scales, and graph properties, as well as 5 graph classification datasets, show that GrokFormer outperforms state-of-the-art GTs and GNNs. Our code is available at https://github.com/GGA23/GrokFormer
        
 
 
@@ -2155,13 +2156,13 @@ Inspired by the Kolmogorov-Arnold representation theorem and Kurkova's principle
        
 
 
-### [An Investigation on the Potential of KAN in Speech Enhancement](https://arxiv.org/abs/2412.17778)
+### [From KAN to GR-KAN: Advancing Speech Enhancement with KAN-Based Methodology](https://arxiv.org/abs/2412.17778)
 
 **Authors:**
-Haoyang Li, Yuchen Hu, Chen Chen, Eng Siong Chng
+Haoyang Li, Yuchen Hu, Chen Chen, Sabato Marco Siniscalchi, Songting Liu, Eng Siong Chng
 
 **Abstract:**
-High-fidelity speech enhancement often requires sophisticated modeling to capture intricate, multiscale patterns. Standard activation functions, while introducing nonlinearity, lack the flexibility to fully address this complexity. Kolmogorov-Arnold Networks (KAN), an emerging methodology that employs learnable activation functions on graph edges, present a promising alternative. This work investigates two novel KAN variants based on rational and radial basis functions for speech enhancement. We integrate the rational variant into the 1D CNN blocks of Demucs and the GRU-Transformer blocks of MP-SENet, while the radial variant is adapted to the 2D CNN-based decoders of MP-SENet. Experiments on the VoiceBank-DEMAND dataset show that replacing standard activations with KAN-based activations improves speech quality across both the time-domain and time-frequency domain methods with minimal impact on model size and FLOP, underscoring KAN's potential to improve speech enhancement models.
+Deep neural network (DNN)-based speech enhancement (SE) usually uses conventional activation functions, which lack the expressiveness to capture complex multiscale structures needed for high-fidelity SE. Group-Rational KAN (GR-KAN), a variant of Kolmogorov-Arnold Networks (KAN), retains KAN's expressiveness while improving scalability on complex tasks. We adapt GR-KAN to existing DNN-based SE by replacing dense layers with GR-KAN layers in the time-frequency (T-F) domain MP-SENet and adapting GR-KAN's activations into the 1D CNN layers in the time-domain Demucs. Results on Voicebank-DEMAND show that GR-KAN requires up to 4x fewer parameters while improving PESQ by up to 0.1. In contrast, KAN, facing scalability issues, outperforms MLP on a small-scale signal modeling task but fails to improve MP-SENet. We demonstrate the first successful use of KAN-based methods for consistent improvement in both time- and SoTA TF-domain SE, establishing GR-KAN as a promising alternative for SE.
        
 
 
@@ -2970,7 +2971,7 @@ Using Kolmogorov-Arnold Networks (KANs), we construct a holographic model inform
 Subhajit Maity, Killian Hitsman, Xin Li, Aritra Dutta
 
 **Abstract:**
-Kolmogorov-Arnold networks (KANs) are a remarkable innovation consisting of learnable activation functions with the potential to capture more complex relationships from data. Although KANs are useful in finding symbolic representations and continual learning of one-dimensional functions, their effectiveness in diverse machine learning (ML) tasks, such as vision, remains questionable. Presently, KANs are deployed by replacing multilayer perceptrons (MLPs) in deep network architectures, including advanced architectures such as vision Transformers (ViTs). In this paper, we are the first to design a general learnable Kolmogorov-Arnold Attention (KArAt) for vanilla ViTs that can operate on any choice of basis. However, the computing and memory costs of training them motivated us to propose a more modular version, and we designed particular learnable attention, called Fourier-KArAt. Fourier-KArAt and its variants either outperform their ViT counterparts or show comparable performance on CIFAR-10, CIFAR-100, and ImageNet-1K datasets. We dissect these architectures' performance and generalization capacity by analyzing their loss landscapes, weight distributions, optimizer path, attention visualization, and spectral behavior, and contrast them with vanilla ViTs. The goal of this paper is not to produce parameter- and compute-efficient attention, but to encourage the community to explore KANs in conjunction with more advanced architectures that require a careful understanding of learnable activations. Our open-source code and implementation details are available on: https://subhajitmaity.me/KArAt
+Kolmogorov-Arnold networks (KANs) are a remarkable innovation consisting of learnable activation functions with the potential to capture more complex relationships from data. Presently, KANs are deployed by replacing multilayer perceptrons (MLPs) in deep networks, including advanced architectures such as vision Transformers (ViTs). This work asks whether a similar replacement in the attention can bring benefits. In this paper, we design the first learnable attention called Kolmogorov-Arnold Attention (KArAt) for ViTs that can operate on any basis, ranging from Fourier, Wavelets, Splines, to Rational Functions. However, learnable activations in attention cause a memory explosion. To remedy this, we propose a modular version of KArAt that uses a low-rank approximation. By adopting the Fourier basis, Fourier-KArAt and its variants, in some cases, outperform their traditional softmax counterparts, or show comparable performance on CIFAR-10, CIFAR-100, and ImageNet-1K datasets. We also deploy Fourier KArAt to ConViT and Swin-Transformer, and use it in detection and segmentation with ViT-Det. We dissect these architectures' performance by analyzing their loss landscapes, weight distributions, optimizer path, attention visualization, and transferability to other datasets. KArAt's learnable activation shows a better attention score across all ViTs, indicating better token-to-token interactions, contributing to better inference. Still, its generalizability does not scale with larger ViTs. However, many factors, including the present computing interface, affect the performance of parameter- and memory-heavy KArAts. We note that the goal of this paper is not to produce efficient attention or challenge the traditional activations; by designing KArAt, we are the first to show that attention can be learned and encourage researchers to explore KArAt in conjunction with more advanced architectures.
        
 
 
@@ -3097,10 +3098,10 @@ The Kolmogorov-Arnold Network (KAN) is a novel multi-layer network model recogni
 ### [Graph Kolmogorov-Arnold Networks for Multi-Cancer Classification and Biomarker Identification, An Interpretable Multi-Omics Approach](https://arxiv.org/abs/2503.22939)
 
 **Authors:**
-Fadi Alharbi, Nishant Budhiraja, Aleksandar Vakanski, Boyu Zhang, Murtada K. Elbashir, Mohanad Mohammed
+Fadi Alharbi, Nishant Budhiraja, Aleksandar Vakanski, Boyu Zhang, Murtada K. Elbashir, Hrshith Gudur, Mohanad Mohammed
 
 **Abstract:**
-The integration of multi-omics data presents a major challenge in precision medicine, requiring advanced computational methods for accurate disease classification and biological interpretation. This study introduces the Multi-Omics Graph Kolmogorov-Arnold Network (MOGKAN), a deep learning model that integrates messenger RNA, micro RNA sequences, and DNA methylation data with Protein-Protein Interaction (PPI) networks for accurate and interpretable cancer classification across 31 cancer types. MOGKAN employs a hybrid approach combining differential expression with DESeq2, Linear Models for Microarray (LIMMA), and Least Absolute Shrinkage and Selection Operator (LASSO) regression to reduce multi-omics data dimensionality while preserving relevant biological features. The model architecture is based on the Kolmogorov-Arnold theorem principle, using trainable univariate functions to enhance interpretability and feature analysis. MOGKAN achieves classification accuracy of 96.28 percent and demonstrates low experimental variability with a standard deviation that is reduced by 1.58 to 7.30 percents compared to Convolutional Neural Networks (CNNs) and Graph Neural Networks (GNNs). The biomarkers identified by MOGKAN have been validated as cancer-related markers through Gene Ontology (GO) and Kyoto Encyclopedia of Genes and Genomes (KEGG) enrichment analysis. The proposed model presents an ability to uncover molecular oncogenesis mechanisms by detecting phosphoinositide-binding substances and regulating sphingolipid cellular processes. By integrating multi-omics data with graph-based deep learning, our proposed approach demonstrates superior predictive performance and interpretability that has the potential to enhance the translation of complex multi-omics data into clinically actionable cancer diagnostics.
+The integration of heterogeneous multi-omics datasets at a systems level remains a central challenge for developing analytical and computational models in precision cancer diagnostics. This paper introduces Multi-Omics Graph Kolmogorov-Arnold Network (MOGKAN), a deep learning framework that utilizes messenger-RNA, micro-RNA sequences, and DNA methylation samples together with Protein-Protein Interaction (PPI) networks for cancer classification across 31 different cancer types. The proposed approach combines differential gene expression with DESeq2, Linear Models for Microarray (LIMMA), and Least Absolute Shrinkage and Selection Operator (LASSO) regression to reduce multi-omics data dimensionality while preserving relevant biological features. The model architecture is based on the Kolmogorov-Arnold theorem principle and uses trainable univariate functions to enhance interpretability and feature analysis. MOGKAN achieves classification accuracy of 96.28 percent and exhibits low experimental variability in comparison to related deep learning-based models. The biomarkers identified by MOGKAN were validated as cancer-related markers through Gene Ontology (GO) and Kyoto Encyclopedia of Genes and Genomes (KEGG) enrichment analysis. By integrating multi-omics data with graph-based deep learning, our proposed approach demonstrates robust predictive performance and interpretability with potential to enhance the translation of complex multi-omics data into clinically actionable cancer diagnostics.
        
 
 
@@ -3235,13 +3236,13 @@ Kolmogorov-Arnold Networks (KANs) have gained attention as a promising alternati
        
 
 
-### [TabKAN: Advancing Tabular Data Analysis using Kolmograv-Arnold Network](https://arxiv.org/abs/2504.06559)
+### [TabKAN: Advancing Tabular Data Analysis using Kolmogorov-Arnold Network](https://arxiv.org/abs/2504.06559)
 
 **Authors:**
 Ali Eslamian, Alireza Afzal Aghaei, Qiang Cheng
 
 **Abstract:**
-Tabular data analysis presents unique challenges due to its heterogeneous feature types, missing values, and complex interactions. While traditional machine learning methods, such as gradient boosting, often outperform deep learning approaches, recent advancements in neural architectures offer promising alternatives. This paper introduces TabKAN, a novel framework that advances tabular data modeling using Kolmogorov-Arnold Networks (KANs). Unlike conventional deep learning models, KANs leverage learnable activation functions on edges, enhancing both interpretability and training efficiency. Our contributions include: (1) the introduction of modular KAN-based architectures tailored for tabular data analysis, (2) the development of a transfer learning framework for KAN models, enabling effective knowledge transfer between domains, (3) the development of model-specific interpretability for tabular data learning, reducing reliance on post hoc and model-agnostic analysis, and (4) comprehensive evaluation of vanilla supervised learning across binary and multi-class classification tasks. Through extensive benchmarking on diverse public datasets, TabKAN demonstrates superior performance in supervised learning while significantly outperforming classical and Transformer-based models in transfer learning scenarios. Our findings highlight the advantage of KAN-based architectures in efficiently transferring knowledge across domains, bridging the gap between traditional machine learning and deep learning for structured data.
+Tabular data analysis presents unique challenges due to its heterogeneous feature types, missing values, and complex interactions. While traditional machine learning methods, such as gradient boosting, often outperform deep learning approaches, recent advancements in neural architectures offer promising alternatives. This paper introduces TabKAN, a novel framework that advances tabular data modeling using Kolmogorov-Arnold Networks (KANs). Unlike conventional deep learning models, KANs leverge learnable activation functions on edges, which improve both interpretability and training efficiency. Our contributions include: (1) the introduction of modular KAN-based architectures for tabular data analysis, (2) the development of a transfer learning framework for KAN models that supports knowledge transfer between domains, (3) the development of model-specific interpretability for tabular data learning, which reduces dependence on post hoc and model-agnostic analysis, and (4) comprehensive evaluation of vanilla supervised learning across binary and multi-class classification tasks. Through extensive benchmarking on diverse public datasets, TabKAN demonstrates superior performance in supervised learning while significantly outperforming classical and Transformer-based models in transfer learning scenarios. Our findings highlight the advantage of KAN-based architectures in transferring knowledge across domains and narrowing the gap between traditional machine learning and deep learning for structured data.
        
 
 
@@ -3262,16 +3263,6 @@ Dhruv Kulkarni, Bharat Bhammar, Henil Thaker, Pranav Dhobi, R. P. Gohil, Sai Man
 
 **Abstract:**
 The memory wall problem arises due to the disparity between fast processors and slower memory, causing significant delays in data access, even more so on edge devices. Data prefetching is a key strategy to address this, with traditional methods evolving to incorporate Machine Learning (ML) for improved accuracy. Modern prefetchers must balance high accuracy with low latency to further practicality. We explore the applicability of utilizing Kolmogorov-Arnold Networks (KAN) with learnable activation functions,a prefetcher we implemented called KANBoost, to further this aim. KANs are a novel, state-of-the-art model that work on breaking down continuous, bounded multi-variate functions into functions of their constituent variables, and use these constitutent functions as activations on each individual neuron. KANBoost predicts the next memory access by modeling deltas between consecutive addresses, offering a balance of accuracy and efficiency to mitigate the memory wall problem with minimal overhead, instead of relying on address-correlation prefetching. Initial results indicate that KAN-based prefetching reduces inference latency (18X lower than state-of-the-art ML prefetchers) while achieving moderate IPC improvements (2.5\% over no-prefetching). While KANs still face challenges in capturing long-term dependencies, we propose that future research should explore hybrid models that combine KAN efficiency with stronger sequence modeling techniques, paving the way for practical ML-based prefetching in edge devices and beyond.
-       
-
-
-### [Proteinoid spikes: from protocognitive to universal approximating agents](https://arxiv.org/abs/2504.10362)
-
-**Authors:**
-Saksham Sharma, Adnan Mahmud, Giuseppe Tarabella, Panagiotis Mougoyannis, Andrew Adamatzky
-
-**Abstract:**
-Proteinoids, as soft matter fluidic systems, are computational substrates that have been recently proposed for their analog computing capabilities. Such systems exhibit oscillatory electrical activity because of cationic and anionic exchange inside and outside such gels. It has also been recently shown that this (analog) electrical activity, when sampled at fixed time intervals, can be used to reveal their underlying information-theoretic, computational code. This code, for instance, can be expressed in the (digital) language of Boolean gates and QR codes. Though, this might seem as a good evidence that proteinoid substrates have computing abilities when subjected to analog-to-digital transition, the leap from their underlying computational code to computing abilities is not well explained yet. How can the electrical activity inside proteinoids, whilst of chemical origin, be able them to perform computational tasks at the first place? In addition, proteinoids are also hypothesised to be the chemical manifestation of the primordial soup, i.e., as potential entities with proto-cognitive abilities. In this work, we show that the proteinoid substrate, owing to its chemical makeup and proto-cognitive abilities, can be interpreted as an universal approximator, thanks to a novel equivalence between the electrical activity exhibited by the substrate and a deep Rectified Linear Unit (deep ReLU) network. We exemplify this equivalence by constructing a prediction algorithm which acts as a binary classification model and extract 16-dimensional vector data from the proteinoid spike, in order to perform predictions with 70.41\% accuracy. We conclude by drawing an equivalence between the the deep ReLU network and the Kolmogorov-Arnold representation theorem, whose origin can be traced back to Hilbert's thirteenth problem.
        
 
 
@@ -3392,6 +3383,350 @@ Ziran Liang, Rui An, Wenqi Fan, Yanghui Rao, Yuxuan Liang
 
 **Abstract:**
 As time evolves, data within specific domains exhibit predictability that motivates time series forecasting to predict future trends from historical data. However, current deep forecasting methods can achieve promising performance but generally lack interpretability, hindering trustworthiness and practical deployment in safety-critical applications such as auto-driving and healthcare. In this paper, we propose a novel interpretable model, iTFKAN, for credible time series forecasting. iTFKAN enables further exploration of model decision rationales and underlying data patterns due to its interpretability achieved through model symbolization. Besides, iTFKAN develops two strategies, prior knowledge injection, and time-frequency synergy learning, to effectively guide model learning under complex intertwined time series data. Extensive experimental results demonstrated that iTFKAN can achieve promising forecasting performance while simultaneously possessing high interpretive capabilities.
+       
+
+
+### [FiberKAN: Kolmogorov-Arnold Networks for Nonlinear Fiber Optics](https://arxiv.org/abs/2504.18833)
+
+**Authors:**
+Xiaotian Jiang, Min Zhang, Xiao Luo, Zelai Yu, Yiming Meng, Danshi Wang
+
+**Abstract:**
+Scientific discovery and dynamic characterization of the physical system play a critical role in understanding, learning, and modeling the physical phenomena and behaviors in various fields. Although theories and laws of many system dynamics have been derived from rigorous first principles, there are still a considerable number of complex dynamics that have not yet been discovered and characterized, which hinders the progress of science in corresponding fields. To address these challenges, artificial intelligence for science (AI4S) has emerged as a burgeoning research field. In this paper, a Kolmogorov-Arnold Network (KAN)-based AI4S framework named FiberKAN is proposed for scientific discovery and dynamic characterization of nonlinear fiber optics. Unlike the classic multi-layer perceptron (MLP) structure, the trainable and transparent activation functions in KAN make the network have stronger physical interpretability and nonlinear characterization abilities. Multiple KANs are established for fiber-optic system dynamics under various physical effects. Results show that KANs can well discover and characterize the explicit, implicit, and non-analytical solutions under different effects, and achieve better performance than MLPs with the equivalent scale of trainable parameters. Moreover, the effectiveness, computational cost, interactivity, noise resistance, transfer learning ability, and comparison between related algorithms in fiber-optic systems are also studied and analyzed. This work highlights the transformative potential of KAN, establishing it as a pioneering paradigm in AI4S that propels advancements in nonlinear fiber optics, and fosters groundbreaking innovations across a broad spectrum of scientific and engineering disciplines.
+       
+
+
+### [A Unified Benchmark of Federated Learning with Kolmogorov-Arnold Networks for Medical Imaging](https://arxiv.org/abs/2504.19639)
+
+**Authors:**
+Youngjoon Lee, Jinu Gong, Joonhyuk Kang
+
+**Abstract:**
+Federated Learning (FL) enables model training across decentralized devices without sharing raw data, thereby preserving privacy in sensitive domains like healthcare. In this paper, we evaluate Kolmogorov-Arnold Networks (KAN) architectures against traditional MLP across six state-of-the-art FL algorithms on a blood cell classification dataset. Notably, our experiments demonstrate that KAN can effectively replace MLP in federated environments, achieving superior performance with simpler architectures. Furthermore, we analyze the impact of key hyperparameters-grid size and network architecture-on KAN performance under varying degrees of Non-IID data distribution. Additionally, our ablation studies reveal that optimizing KAN width while maintaining minimal depth yields the best performance in federated settings. As a result, these findings establish KAN as a promising alternative for privacy-preserving medical imaging applications in distributed healthcare. To the best of our knowledge, this is the first comprehensive benchmark of KAN in FL settings for medical imaging task.
+       
+
+
+## May
+### [Anant-Net: Breaking the Curse of Dimensionality with Scalable and Interpretable Neural Surrogate for High-Dimensional PDEs](https://arxiv.org/abs/2505.03595)
+
+**Authors:**
+Sidharth S. Menon, Ameya D. Jagtap
+
+**Abstract:**
+High-dimensional partial differential equations (PDEs) arise in diverse scientific and engineering applications but remain computationally intractable due to the curse of dimensionality. Traditional numerical methods struggle with the exponential growth in computational complexity, particularly on hypercubic domains, where the number of required collocation points increases rapidly with dimensionality. Here, we introduce Anant-Net, an efficient neural surrogate that overcomes this challenge, enabling the solution of PDEs in high dimensions. Unlike hyperspheres, where the internal volume diminishes as dimensionality increases, hypercubes retain or expand their volume (for unit or larger length), making high-dimensional computations significantly more demanding. Anant-Net efficiently incorporates high-dimensional boundary conditions and minimizes the PDE residual at high-dimensional collocation points. To enhance interpretability, we integrate Kolmogorov-Arnold networks into the Anant-Net architecture. We benchmark Anant-Net's performance on several linear and nonlinear high-dimensional equations, including the Poisson, Sine-Gordon, and Allen-Cahn equations, demonstrating high accuracy and robustness across randomly sampled test points from high-dimensional space. Importantly, Anant-Net achieves these results with remarkable efficiency, solving 300-dimensional problems on a single GPU within a few hours. We also compare Anant-Net's results for accuracy and runtime with other state-of-the-art methods. Our findings establish Anant-Net as an accurate, interpretable, and scalable framework for efficiently solving high-dimensional PDEs.
+       
+
+
+### [Novel Extraction of Discriminative Fine-Grained Feature to Improve Retinal Vessel Segmentation](https://arxiv.org/abs/2505.03896)
+
+**Authors:**
+Shuang Zeng, Chee Hong Lee, Micky C Nnamdi, Wenqi Shi, J Ben Tamo, Lei Zhu, Hangzhou He, Xinliang Zhang, Qian Chen, May D. Wang, Yanye Lu, Qiushi Ren
+
+**Abstract:**
+Retinal vessel segmentation is a vital early detection method for several severe ocular diseases. Despite significant progress in retinal vessel segmentation with the advancement of Neural Networks, there are still challenges to overcome. Specifically, retinal vessel segmentation aims to predict the class label for every pixel within a fundus image, with a primary focus on intra-image discrimination, making it vital for models to extract more discriminative features. Nevertheless, existing methods primarily focus on minimizing the difference between the output from the decoder and the label, but ignore fully using feature-level fine-grained representations from the encoder. To address these issues, we propose a novel Attention U-shaped Kolmogorov-Arnold Network named AttUKAN along with a novel Label-guided Pixel-wise Contrastive Loss for retinal vessel segmentation. Specifically, we implement Attention Gates into Kolmogorov-Arnold Networks to enhance model sensitivity by suppressing irrelevant feature activations and model interpretability by non-linear modeling of KAN blocks. Additionally, we also design a novel Label-guided Pixel-wise Contrastive Loss to supervise our proposed AttUKAN to extract more discriminative features by distinguishing between foreground vessel-pixel pairs and background pairs. Experiments are conducted across four public datasets including DRIVE, STARE, CHASE_DB1, HRF and our private dataset. AttUKAN achieves F1 scores of 82.50%, 81.14%, 81.34%, 80.21% and 80.09%, along with MIoU scores of 70.24%, 68.64%, 68.59%, 67.21% and 66.94% in the above datasets, which are the highest compared to 11 networks for retinal vessel segmentation. Quantitative and qualitative results show that our AttUKAN achieves state-of-the-art performance and outperforms existing retinal vessel segmentation methods. Our code will be available at https://github.com/stevezs315/AttUKAN.
+       
+
+
+### [Hyb-KAN ViT: Hybrid Kolmogorov-Arnold Networks Augmented Vision Transformer](https://arxiv.org/abs/2505.04740)
+
+**Authors:**
+Sainath Dey, Mitul Goswami, Jashika Sethi, Prasant Kumar Pattnaik
+
+**Abstract:**
+This study addresses the inherent limitations of Multi-Layer Perceptrons (MLPs) in Vision Transformers (ViTs) by introducing Hybrid Kolmogorov-Arnold Network (KAN)-ViT (Hyb-KAN ViT), a novel framework that integrates wavelet-based spectral decomposition and spline-optimized activation functions, prior work has failed to focus on the prebuilt modularity of the ViT architecture and integration of edge detection capabilities of Wavelet functions. We propose two key modules: Efficient-KAN (Eff-KAN), which replaces MLP layers with spline functions and Wavelet-KAN (Wav-KAN), leveraging orthogonal wavelet transforms for multi-resolution feature extraction. These modules are systematically integrated in ViT encoder layers and classification heads to enhance spatial-frequency modeling while mitigating computational bottlenecks. Experiments on ImageNet-1K (Image Recognition), COCO (Object Detection and Instance Segmentation), and ADE20K (Semantic Segmentation) demonstrate state-of-the-art performance with Hyb-KAN ViT. Ablation studies validate the efficacy of wavelet-driven spectral priors in segmentation and spline-based efficiency in detection tasks. The framework establishes a new paradigm for balancing parameter efficiency and multi-scale representation in vision architectures.
+       
+
+
+### [Prediction via Shapley Value Regression](https://arxiv.org/abs/2505.04775)
+
+**Authors:**
+Amr Alkhatib, Roman Bresson, Henrik Boström, Michalis Vazirgiannis
+
+**Abstract:**
+Shapley values have several desirable, theoretically well-supported, properties for explaining black-box model predictions. Traditionally, Shapley values are computed post-hoc, leading to additional computational cost at inference time. To overcome this, a novel method, called ViaSHAP, is proposed, that learns a function to compute Shapley values, from which the predictions can be derived directly by summation. Two approaches to implement the proposed method are explored; one based on the universal approximation theorem and the other on the Kolmogorov-Arnold representation theorem. Results from a large-scale empirical investigation are presented, showing that ViaSHAP using Kolmogorov-Arnold Networks performs on par with state-of-the-art algorithms for tabular data. It is also shown that the explanations of ViaSHAP are significantly more accurate than the popular approximator FastSHAP on both tabular data and images.
+       
+
+
+### [OccuEMBED: Occupancy Extraction Merged with Building Energy Disaggregation for Occupant-Responsive Operation at Scale](https://arxiv.org/abs/2505.05478)
+
+**Authors:**
+Yufei Zhang, Andrew Sonta
+
+**Abstract:**
+Buildings account for a significant share of global energy consumption and emissions, making it critical to operate them efficiently. As electricity grids become more volatile with renewable penetration, buildings must provide flexibility to support grid stability. Building automation plays a key role in enhancing efficiency and flexibility via centralized operations, but it must prioritize occupant-centric strategies to balance energy and comfort targets. However, incorporating occupant information into large-scale, centralized building operations remains challenging due to data limitations. We investigate the potential of using whole-building smart meter data to infer both occupancy and system operations. Integrating these insights into data-driven building energy analysis allows more occupant-centric energy-saving and flexibility at scale. Specifically, we propose OccuEMBED, a unified framework for occupancy inference and system-level load analysis. It combines two key components: a probabilistic occupancy profile generator, and a controllable and interpretable load disaggregator supported by Kolmogorov-Arnold Networks (KAN). This design embeds knowledge of occupancy patterns and load-occupancy-weather relationships into deep learning models. We conducted comprehensive evaluations to demonstrate its effectiveness across synthetic and real-world datasets compared to various occupancy inference baselines. OccuEMBED always achieved average F1 scores above 0.8 in discrete occupancy inference and RMSE within 0.1-0.2 for continuous occupancy ratios. We further demonstrate how OccuEMBED integrates with building load monitoring platforms to display occupancy profiles, analyze system-level operations, and inform occupant-responsive strategies. Our model lays a robust foundation in scaling occupant-centric building management systems to meet the challenges of an evolving energy system.
+       
+
+
+### [Improving Generalizability of Kolmogorov-Arnold Networks via Error-Correcting Output Codes](https://arxiv.org/abs/2505.05798)
+
+**Authors:**
+Youngjoon Lee, Jinu Gong, Joonhyuk Kang
+
+**Abstract:**
+Kolmogorov-Arnold Networks (KAN) offer universal function approximation using univariate spline compositions without nonlinear activations. In this work, we integrate Error-Correcting Output Codes (ECOC) into the KAN framework to transform multi-class classification into multiple binary tasks, improving robustness via Hamming-distance decoding. Our proposed KAN with ECOC method outperforms vanilla KAN on a challenging blood cell classification dataset, achieving higher accuracy under diverse hyperparameter settings. Ablation studies further confirm that ECOC consistently enhances performance across FastKAN and FasterKAN variants. These results demonstrate that ECOC integration significantly boosts KAN generalizability in critical healthcare AI applications. To the best of our knowledge, this is the first integration of ECOC with KAN for enhancing multi-class medical image classification performance.
+       
+
+
+### [Mixer-Informer-Based Two-Stage Transfer Learning for Long-Sequence Load Forecasting in Newly Constructed Electric Vehicle Charging Stations](https://arxiv.org/abs/2505.06657)
+
+**Authors:**
+Zhenhua Zhou, Bozhen Jiang, Qin Wang
+
+**Abstract:**
+The rapid rise in electric vehicle (EV) adoption demands precise charging station load forecasting, challenged by long-sequence temporal dependencies and limited data in new facilities. This study proposes MIK-TST, a novel two-stage transfer learning framework integrating Mixer, Informer, and Kolmogorov-Arnold Networks (KAN). The Mixer fuses multi-source features, Informer captures long-range dependencies via ProbSparse attention, and KAN enhances nonlinear modeling with learnable activation functions. Pre-trained on extensive data and fine-tuned on limited target data, MIK-TST achieves 4% and 8% reductions in MAE and MSE, respectively, outperforming baselines on a dataset of 26 charging stations in Boulder, USA. This scalable solution enhances smart grid efficiency and supports sustainable EV infrastructure expansion.
+       
+
+
+### [Enhancing Federated Learning with Kolmogorov-Arnold Networks: A Comparative Study Across Diverse Aggregation Strategies](https://arxiv.org/abs/2505.07629)
+
+**Authors:**
+Yizhou Ma, Zhuoqin Yang, Luis-Daniel Ibáñez
+
+**Abstract:**
+Multilayer Perceptron (MLP), as a simple yet powerful model, continues to be widely used in classification and regression tasks. However, traditional MLPs often struggle to efficiently capture nonlinear relationships in load data when dealing with complex datasets. Kolmogorov-Arnold Networks (KAN), inspired by the Kolmogorov-Arnold representation theorem, have shown promising capabilities in modeling complex nonlinear relationships. In this study, we explore the performance of KANs within federated learning (FL) frameworks and compare them to traditional Multilayer Perceptrons. Our experiments, conducted across four diverse datasets demonstrate that KANs consistently outperform MLPs in terms of accuracy, stability, and convergence efficiency. KANs exhibit remarkable robustness under varying client numbers and non-IID data distributions, maintaining superior performance even as client heterogeneity increases. Notably, KANs require fewer communication rounds to converge compared to MLPs, highlighting their efficiency in FL scenarios. Additionally, we evaluate multiple parameter aggregation strategies, with trimmed mean and FedProx emerging as the most effective for optimizing KAN performance. These findings establish KANs as a robust and scalable alternative to MLPs for federated learning tasks, paving the way for their application in decentralized and privacy-preserving environments.
+       
+
+
+### [Symbolic Regression with Multimodal Large Language Models and Kolmogorov Arnold Networks](https://arxiv.org/abs/2505.07956)
+
+**Authors:**
+Thomas R. Harvey, Fabian Ruehle, Kit Fraser-Taliente, James Halverson
+
+**Abstract:**
+We present a novel approach to symbolic regression using vision-capable large language models (LLMs) and the ideas behind Google DeepMind's Funsearch. The LLM is given a plot of a univariate function and tasked with proposing an ansatz for that function. The free parameters of the ansatz are fitted using standard numerical optimisers, and a collection of such ansätze make up the population of a genetic algorithm. Unlike other symbolic regression techniques, our method does not require the specification of a set of functions to be used in regression, but with appropriate prompt engineering, we can arbitrarily condition the generative step. By using Kolmogorov Arnold Networks (KANs), we demonstrate that ``univariate is all you need'' for symbolic regression, and extend this method to multivariate functions by learning the univariate function on each edge of a trained KAN. The combined expression is then simplified by further processing with a language model.
+       
+
+
+### [AC-PKAN: Attention-Enhanced and Chebyshev Polynomial-Based Physics-Informed Kolmogorov-Arnold Networks](https://arxiv.org/abs/2505.08687)
+
+**Authors:**
+Hangwei Zhang, Zhimu Huang, Yan Wang
+
+**Abstract:**
+Kolmogorov-Arnold Networks (KANs) have recently shown promise for solving partial differential equations (PDEs). Yet their original formulation is computationally and memory intensive, motivating the introduction of Chebyshev Type-I-based KANs (Chebyshev1KANs). Although Chebyshev1KANs have outperformed the vanilla KANs architecture, our rigorous theoretical analysis reveals that they still suffer from rank collapse, ultimately limiting their expressive capacity. To overcome these limitations, we enhance Chebyshev1KANs by integrating wavelet-activated MLPs with learnable parameters and an internal attention mechanism. We prove that this design preserves a full-rank Jacobian and is capable of approximating solutions to PDEs of arbitrary order. Furthermore, to alleviate the loss instability and imbalance introduced by the Chebyshev polynomial basis, we externally incorporate a Residual Gradient Attention (RGA) mechanism that dynamically re-weights individual loss terms according to their gradient norms and residual magnitudes. By jointly leveraging internal and external attention, we present AC-PKAN, a novel architecture that constitutes an enhancement to weakly supervised Physics-Informed Neural Networks (PINNs) and extends the expressive power of KANs. Experimental results from nine benchmark tasks across three domains show that AC-PKAN consistently outperforms or matches state-of-the-art models such as PINNsFormer, establishing it as a highly effective tool for solving complex real-world engineering problems in zero-data or data-sparse regimes. The code will be made publicly available upon acceptance.
+       
+
+
+### [Personalized Control for Lower Limb Prosthesis Using Kolmogorov-Arnold Networks](https://arxiv.org/abs/2505.09366)
+
+**Authors:**
+SeyedMojtaba Mohasel, Alireza Afzal Aghaei, Corey Pew
+
+**Abstract:**
+Objective: This paper investigates the potential of learnable activation functions in Kolmogorov-Arnold Networks (KANs) for personalized control in a lower-limb prosthesis. In addition, user-specific vs. pooled training data is evaluated to improve machine learning (ML) and Deep Learning (DL) performance for turn intent prediction.
+  Method: Inertial measurement unit (IMU) data from the shank were collected from five individuals with lower-limb amputation performing turning tasks in a laboratory setting. Ability to classify an upcoming turn was evaluated for Multilayer Perceptron (MLP), Kolmogorov-Arnold Network (KAN), convolutional neural network (CNN), and fractional Kolmogorov-Arnold Networks (FKAN). The comparison of MLP and KAN (for ML models) and FKAN and CNN (for DL models) assessed the effectiveness of learnable activation functions. Models were trained separately on user-specific and pooled data to evaluate the impact of training data on their performance.
+  Results: Learnable activation functions in KAN and FKAN did not yield significant improvement compared to MLP and CNN, respectively. Training on user-specific data yielded superior results compared to pooled data for ML models ($p < 0.05$). In contrast, no significant difference was observed between user-specific and pooled training for DL models.
+  Significance: These findings suggest that learnable activation functions may demonstrate distinct advantages in datasets involving more complex tasks and larger volumes. In addition, pooled training showed comparable performance to user-specific training in DL models, indicating that model training for prosthesis control can utilize data from multiple participants.
+       
+
+
+### [Interpretable Artificial Intelligence for Topological Photonics](https://arxiv.org/abs/2505.10485)
+
+**Authors:**
+Ali Ghorashi, Sachin Vaidya, Ziming Liu, Charlotte Loh, Thomas Christensen, Max Tegmark, Marin Soljačić
+
+**Abstract:**
+Topological photonic crystals (PhCs) offer robust, disorder-resistant modes engendered by nontrivial band symmetries, but designing PhCs with prescribed topological band properties remains a challenge due to the complexity involved in mapping the continuous real-space design landscape of photonic crystals to the discrete output space of band topology. Here, we introduce a new approach to address this problem, employing Kolmogorov--Arnold networks (KANs) to predict and inversely design the band symmetries of two-dimensional PhCs with two-fold rotational (C2) symmetry. We show that a single-hidden-layer KAN, trained on a dataset of C2-symmetric unit cells, achieves 99% accuracy in classifying the symmetry eigenvalues of the lowest transverse-magnetic band. For interpretability, we use symbolic regression to extract eight algebraic formulas that characterize the band symmetry classes in terms of the Fourier components of the dielectric function. These formulas not only retain the full predictive power of the network but also enable deterministic inverse design. Applying them, we generate 2,000 photonic crystals with target band symmetries, achieving over 92% accuracy even for high-contrast, experimentally realizable structures beyond the training domain.
+       
+
+
+### [MedVKAN: Efficient Feature Extraction with Mamba and KAN for Medical Image Segmentation](https://arxiv.org/abs/2505.11797)
+
+**Authors:**
+Hancan Zhu, Jinhao Chen, Guanghua He
+
+**Abstract:**
+Medical image segmentation relies heavily on convolutional neural networks (CNNs) and Transformer-based models. However, CNNs are constrained by limited receptive fields, while Transformers suffer from scalability challenges due to their quadratic computational complexity. To address these limitations, recent advances have explored alternative architectures. The state-space model Mamba offers near-linear complexity while capturing long-range dependencies, and the Kolmogorov-Arnold Network (KAN) enhances nonlinear expressiveness by replacing fixed activation functions with learnable ones. Building on these strengths, we propose MedVKAN, an efficient feature extraction model integrating Mamba and KAN. Specifically, we introduce the EFC-KAN module, which enhances KAN with convolutional operations to improve local pixel interaction. We further design the VKAN module, integrating Mamba with EFC-KAN as a replacement for Transformer modules, significantly improving feature extraction. Extensive experiments on five public medical image segmentation datasets show that MedVKAN achieves state-of-the-art performance on four datasets and ranks second on the remaining one. These results validate the potential of Mamba and KAN for medical image segmentation while introducing an innovative and computationally efficient feature extraction framework. The code is available at: https://github.com/beginner-cjh/MedVKAN.
+       
+
+
+### [KHRONOS: a Kernel-Based Neural Architecture for Rapid, Resource-Efficient Scientific Computation](https://arxiv.org/abs/2505.13315)
+
+**Authors:**
+Reza T. Batley, Sourav Saha
+
+**Abstract:**
+Contemporary models of high dimensional physical systems are constrained by the curse of dimensionality and a reliance on dense data. We introduce KHRONOS (Kernel Expansion Hierarchy for Reduced Order, Neural Optimized Surrogates), an AI framework for model based, model free and model inversion tasks. KHRONOS constructs continuously differentiable target fields with a hierarchical composition of per-dimension kernel expansions, which are tensorized into modes and then superposed. We evaluate KHRONOS on a canonical 2D, Poisson equation benchmark: across 16 to 512 degrees of freedom (DoFs), it obtained L_2-square errors of 5e-4 down to 6e-11. This represents a greater than 100-fold gain over Kolmogorov Arnold Networks (which itself reports a 100 times improvement on MLPs/PINNs with 100 times fewer parameters) when controlling for the number of parameters. This also represents a 1e6-fold improvement in L_2-square error compared to standard linear FEM at comparable DoFs. Inference complexity is dominated by inner products, yielding sub-millisecond full-field predictions that scale to an arbitrary resolution. For inverse problems, KHRONOS facilitates rapid, iterative level set recovery in only a few forward evaluations, with sub-microsecond per sample latency. KHRONOS's scalability, expressivity, and interpretability open new avenues in constrained edge computing, online control, computer vision, and beyond.
+       
+
+
+### [A Kolmogorov-Arnold Neural Model for Cascading Extremes](https://arxiv.org/abs/2505.13370)
+
+**Authors:**
+Miguel de Carvalho, Clemente Ferrer, Ronny Vallejos
+
+**Abstract:**
+This paper addresses the growing concern of cascading extreme events, such as an extreme earthquake followed by a tsunami, by presenting a novel method for risk assessment focused on these domino effects. The proposed approach develops an extreme value theory framework within a Kolmogorov-Arnold network (KAN) to estimate the probability of one extreme event triggering another, conditionally on a feature vector. An extra layer is added to the KAN's architecture to enforce the definition of the parameter of interest within the unit interval, and we refer to the resulting neural model as KANE (KAN with Natural Enforcement). The proposed method is backed by exhaustive numerical studies and further illustrated with real-world applications to seismology and climatology.
+       
+
+
+### [FlashKAT: Understanding and Addressing Performance Bottlenecks in the Kolmogorov-Arnold Transformer](https://arxiv.org/abs/2505.13813)
+
+**Authors:**
+Matthew Raffel, Lizhong Chen
+
+**Abstract:**
+The Kolmogorov-Arnold Network (KAN) has been gaining popularity as an alternative to the multi-layer perceptron (MLP) with its increased expressiveness and interpretability. However, the KAN can be orders of magnitude slower due to its increased computational cost and training instability, limiting its applicability to larger-scale tasks. Recently, the Kolmogorov-Arnold Transformer (KAT) has been proposed, which can achieve FLOPs similar to the traditional Transformer with MLPs by leveraging Group-Rational KAN (GR-KAN). Unfortunately, despite the comparable FLOPs, our characterizations reveal that the KAT is still 123x slower in training speeds, indicating that there are other performance bottlenecks beyond FLOPs. In this paper, we conduct a series of experiments to understand the root cause of the slowdown in KAT. We uncover that the slowdown can be isolated to memory stalls and, more specifically, in the backward pass of GR-KAN caused by inefficient gradient accumulation. To address this memory bottleneck, we propose FlashKAT, which builds on our restructured kernel that minimizes gradient accumulation with atomic adds and accesses to slow memory. Evaluations demonstrate that FlashKAT can achieve a training speedup of 86.5x compared with the state-of-the-art KAT, while reducing rounding errors in the coefficient gradients. Our code is available at https://github.com/OSU-STARLAB/FlashKAT.
+       
+
+
+### [X-KAN: Optimizing Local Kolmogorov-Arnold Networks via Evolutionary Rule-Based Machine Learning](https://arxiv.org/abs/2505.14273)
+
+**Authors:**
+Hiroki Shiraishi, Hisao Ishibuchi, Masaya Nakata
+
+**Abstract:**
+Function approximation is a critical task in various fields. However, existing neural network approaches struggle with locally complex or discontinuous functions due to their reliance on a single global model covering the entire problem space. We propose X-KAN, a novel method that optimizes multiple local Kolmogorov-Arnold Networks (KANs) through an evolutionary rule-based machine learning framework called XCSF. X-KAN combines KAN's high expressiveness with XCSF's adaptive partitioning capability by implementing local KAN models as rule consequents and defining local regions via rule antecedents. Our experimental results on artificial test functions and real-world datasets demonstrate that X-KAN significantly outperforms conventional methods, including XCSF, Multi-Layer Perceptron, and KAN, in terms of approximation accuracy. Notably, X-KAN effectively handles functions with locally complex or discontinuous structures that are challenging for conventional KAN, using a compact set of rules (average 7.2 $\pm$ 2.3 rules). These results validate the effectiveness of using KAN as a local model in XCSF, which evaluates the rule fitness based on both accuracy and generality. Our X-KAN implementation is available at https://github.com/YNU-NakataLab/X-KAN.
+       
+
+
+### [Interpretable Reinforcement Learning for Load Balancing using Kolmogorov-Arnold Networks](https://arxiv.org/abs/2505.14459)
+
+**Authors:**
+Kamal Singh, Sami Marouani, Ahmad Al Sheikh, Pham Tran Anh Quang, Amaury Habrard
+
+**Abstract:**
+Reinforcement learning (RL) has been increasingly applied to network control problems, such as load balancing. However, existing RL approaches often suffer from lack of interpretability and difficulty in extracting controller equations. In this paper, we propose the use of Kolmogorov-Arnold Networks (KAN) for interpretable RL in network control. We employ a PPO agent with a 1-layer actor KAN model and an MLP Critic network to learn load balancing policies that maximise throughput utility, minimize loss as well as delay. Our approach allows us to extract controller equations from the learned neural networks, providing insights into the decision-making process. We evaluate our approach using different reward functions demonstrating its effectiveness in improving network performance while providing interpretable policies.
+       
+
+
+### [Khan-GCL: Kolmogorov-Arnold Network Based Graph Contrastive Learning with Hard Negatives](https://arxiv.org/abs/2505.15103)
+
+**Authors:**
+Zihu Wang, Boxun Xu, Hejia Geng, Peng Li
+
+**Abstract:**
+Graph contrastive learning (GCL) has demonstrated great promise for learning generalizable graph representations from unlabeled data. However, conventional GCL approaches face two critical limitations: (1) the restricted expressive capacity of multilayer perceptron (MLP) based encoders, and (2) suboptimal negative samples that either from random augmentations-failing to provide effective 'hard negatives'-or generated hard negatives without addressing the semantic distinctions crucial for discriminating graph data. To this end, we propose Khan-GCL, a novel framework that integrates the Kolmogorov-Arnold Network (KAN) into the GCL encoder architecture, substantially enhancing its representational capacity. Furthermore, we exploit the rich information embedded within KAN coefficient parameters to develop two novel critical feature identification techniques that enable the generation of semantically meaningful hard negative samples for each graph representation. These strategically constructed hard negatives guide the encoder to learn more discriminative features by emphasizing critical semantic differences between graphs. Extensive experiments demonstrate that our approach achieves state-of-the-art performance compared to existing GCL methods across a variety of datasets and tasks.
+       
+
+
+### [Degree-Optimized Cumulative Polynomial Kolmogorov-Arnold Networks](https://arxiv.org/abs/2505.15228)
+
+**Authors:**
+Mathew Vanherreweghe, Lirandë Pira, Patrick Rebentrost
+
+**Abstract:**
+We introduce cumulative polynomial Kolmogorov-Arnold networks (CP-KAN), a neural architecture combining Chebyshev polynomial basis functions and quadratic unconstrained binary optimization (QUBO). Our primary contribution involves reformulating the degree selection problem as a QUBO task, reducing the complexity from $O(D^N)$ to a single optimization step per layer. This approach enables efficient degree selection across neurons while maintaining computational tractability. The architecture performs well in regression tasks with limited data, showing good robustness to input scales and natural regularization properties from its polynomial basis. Additionally, theoretical analysis establishes connections between CP-KAN's performance and properties of financial time series. Our empirical validation across multiple domains demonstrates competitive performance compared to several traditional architectures tested, especially in scenarios where data efficiency and numerical stability are important. Our implementation, including strategies for managing computational overhead in larger networks is available in Ref.~\citep{cpkan_implementation}.
+       
+
+
+### [Leveraging KANs for Expedient Training of Multichannel MLPs via Preconditioning and Geometric Refinement](https://arxiv.org/abs/2505.18131)
+
+**Authors:**
+Jonas A. Actor, Graham Harper, Ben Southworth, Eric C. Cyr
+
+**Abstract:**
+Multilayer perceptrons (MLPs) are a workhorse machine learning architecture, used in a variety of modern deep learning frameworks. However, recently Kolmogorov-Arnold Networks (KANs) have become increasingly popular due to their success on a range of problems, particularly for scientific machine learning tasks. In this paper, we exploit the relationship between KANs and multichannel MLPs to gain structural insight into how to train MLPs faster. We demonstrate the KAN basis (1) provides geometric localized support, and (2) acts as a preconditioned descent in the ReLU basis, overall resulting in expedited training and improved accuracy. Our results show the equivalence between free-knot spline KAN architectures, and a class of MLPs that are refined geometrically along the channel dimension of each weight tensor. We exploit this structural equivalence to define a hierarchical refinement scheme that dramatically accelerates training of the multi-channel MLP architecture. We show further accuracy improvements can be had by allowing the $1$D locations of the spline knots to be trained simultaneously with the weights. These advances are demonstrated on a range of benchmark examples for regression and scientific machine learning.
+       
+
+
+### [COLORA: Efficient Fine-Tuning for Convolutional Models with a Study Case on Optical Coherence Tomography Image Classification](https://arxiv.org/abs/2505.18315)
+
+**Authors:**
+Mariano Rivera, Angello Hoyos
+
+**Abstract:**
+We introduce the Convolutional Low-Rank Adaptation (CoLoRA) method, designed explicitly to overcome the inefficiencies found in current CNN fine-tuning methods. CoLoRA can be seen as a natural extension of the convolutional architectures of the Low-Rank Adaptation (LoRA) technique. We demonstrate the capabilities of our method by developing and evaluating models using the widely adopted CNN backbone pre-trained on ImageNet. We observed that this strategy results in a stable and accurate coarse-tuning procedure. Moreover, this strategy is computationally efficient and significantly reduces the number of parameters required for fine-tuning compared to traditional methods. Furthermore, our method substantially improves the speed and stability of training. Our case study focuses on classifying retinal diseases from optical coherence tomography (OCT) images, specifically using the OCTMNIST dataset. Experimental results demonstrate that a CNN backbone fine-tuned with CoLoRA surpasses nearly 1\% in accuracy. Such a performance is comparable to the Vision Transformer, State-space discrete, and Kolmogorov-Arnold network models.
+       
+
+
+### [TK-Mamba: Marrying KAN with Mamba for Text-Driven 3D Medical Image Segmentation](https://arxiv.org/abs/2505.18525)
+
+**Authors:**
+Haoyu Yang, Yuxiang Cai, Jintao Chen, Xuhong Zhang, Wenhui Lei, Xiaoming Shi, Jianwei Yin, Yankai Jiang
+
+**Abstract:**
+3D medical image segmentation is vital for clinical diagnosis and treatment but is challenged by high-dimensional data and complex spatial dependencies. Traditional single-modality networks, such as CNNs and Transformers, are often limited by computational inefficiency and constrained contextual modeling in 3D settings. We introduce a novel multimodal framework that leverages Mamba and Kolmogorov-Arnold Networks (KAN) as an efficient backbone for long-sequence modeling. Our approach features three key innovations: First, an EGSC (Enhanced Gated Spatial Convolution) module captures spatial information when unfolding 3D images into 1D sequences. Second, we extend Group-Rational KAN (GR-KAN), a Kolmogorov-Arnold Networks variant with rational basis functions, into 3D-Group-Rational KAN (3D-GR-KAN) for 3D medical imaging - its first application in this domain - enabling superior feature representation tailored to volumetric data. Third, a dual-branch text-driven strategy leverages CLIP's text embeddings: one branch swaps one-hot labels for semantic vectors to preserve inter-organ semantic relationships, while the other aligns images with detailed organ descriptions to enhance semantic alignment. Experiments on the Medical Segmentation Decathlon (MSD) and KiTS23 datasets show our method achieving state-of-the-art performance, surpassing existing approaches in accuracy and efficiency. This work highlights the power of combining advanced sequence modeling, extended network architectures, and vision-language synergy to push forward 3D medical image segmentation, delivering a scalable solution for clinical use. The source code is openly available at https://github.com/yhy-whu/TK-Mamba.
+       
+
+
+### [Kolmogorov-Arnold Networks for Turbulence Anisotropy Mapping](https://arxiv.org/abs/2505.19366)
+
+**Authors:**
+Nikhila Kalia, Ryley McConkey, Eugene Yee, Fue-Sang Lien
+
+**Abstract:**
+This study evaluates the generalization performance and representation efficiency (parsimony) of a previously introduced Tensor Basis Kolmogorov-Arnold Network (TBKAN) architecture for data-driven turbulence modeling. The TBKAN framework replaces the multi-layer perceptron (MLP) used in either the standard or modified Tensor Basis Neural Network (TBNN) with a Kolmogorov-Arnold network (KAN), which significantly reduces the model complexity while providing a structure that potentially can be used with symbolic regression to provide a physical interpretability that is not available in a 'black box' MLP. While some prior work demonstrated TBKAN's feasibility for modeling a 'simple' flat plate boundary layer flow, this study extends the TBKAN architecture to model more complex benchmark flows, in particular, square duct and periodic hills flows which exhibit strong turbulence anisotropy, secondary motion, and flow separation and reattachment. A realizability-informed loss function is employed to constrain the model predictions, and, for the first time, TBKAN predictions are stably injected into the Reynolds-averaged Navier-Stokes equations to provide it a posteriori predictions of the mean velocity field.
+       
+
+
+### ["KAN you hear me?" Exploring Kolmogorov-Arnold Networks for Spoken Language Understanding](https://arxiv.org/abs/2505.20176)
+
+**Authors:**
+Alkis Koudounas, Moreno La Quatra, Eliana Pastor, Sabato Marco Siniscalchi, Elena Baralis
+
+**Abstract:**
+Kolmogorov-Arnold Networks (KANs) have recently emerged as a promising alternative to traditional neural architectures, yet their application to speech processing remains under explored. This work presents the first investigation of KANs for Spoken Language Understanding (SLU) tasks. We experiment with 2D-CNN models on two datasets, integrating KAN layers in five different configurations within the dense block. The best-performing setup, which places a KAN layer between two linear layers, is directly applied to transformer-based models and evaluated on five SLU datasets with increasing complexity. Our results show that KAN layers can effectively replace the linear layers, achieving comparable or superior performance in most cases. Finally, we provide insights into how KAN and linear layers on top of transformers differently attend to input regions of the raw waveforms.
+       
+
+
+### [FMEnets: Flow, Material, and Energy networks for non-ideal plug flow reactor design](https://arxiv.org/abs/2505.20300)
+
+**Authors:**
+Chenxi Wu, Juan Diego Toscano, Khemraj Shukla, Yingjie Chen, Ali Shahmohammadi, Edward Raymond, Thomas Toupy, Neda Nazemifard, Charles Papageorgiou, George Em Karniadakis
+
+**Abstract:**
+We propose FMEnets, a physics-informed machine learning framework for the design and analysis of non-ideal plug flow reactors. FMEnets integrates the fundamental governing equations (Navier-Stokes for fluid flow, material balance for reactive species transport, and energy balance for temperature distribution) into a unified multi-scale network model. The framework is composed of three interconnected sub-networks with independent optimizers that enable both forward and inverse problem-solving. In the forward mode, FMEnets predicts velocity, pressure, species concentrations, and temperature profiles using only inlet and outlet information. In the inverse mode, FMEnets utilizes sparse multi-residence-time measurements to simultaneously infer unknown kinetic parameters and states. FMEnets can be implemented either as FME-PINNs, which employ conventional multilayer perceptrons, or as FME-KANs, based on Kolmogorov-Arnold Networks. Comprehensive ablation studies highlight the critical role of the FMEnets architecture in achieving accurate predictions. Specifically, FME-KANs are more robust to noise than FME-PINNs, although both representations are comparable in accuracy and speed in noise-free conditions. The proposed framework is applied to three different sets of reaction scenarios and is compared with finite element simulations. FMEnets effectively captures the complex interactions, achieving relative errors less than 2.5% for the unknown kinetic parameters. The new network framework not only provides a computationally efficient alternative for reactor design and optimization, but also opens new avenues for integrating empirical correlations, limited and noisy experimental data, and fundamental physical equations to guide reactor design.
+       
+
+
+### [Input Convex Kolmogorov Arnold Networks](https://arxiv.org/abs/2505.21208)
+
+**Authors:**
+Thomas Deschatre, Xavier Warin
+
+**Abstract:**
+This article presents an input convex neural network architecture using Kolmogorov-Arnold networks (ICKAN). Two specific networks are presented: the first is based on a low-order, linear-by-part, representation of functions, and a universal approximation theorem is provided. The second is based on cubic splines, for which only numerical results support convergence. We demonstrate on simple tests that these networks perform competitively with classical input convex neural networks (ICNNs). In a second part, we use the networks to solve some optimal transport problems needing a convex approximation of functions and demonstrate their effectiveness. Comparisons with ICNNs show that cubic ICKANs produce results similar to those of classical ICNNs.
+       
+
+
+### [Taylor expansion-based Kolmogorov-Arnold network for blind image quality assessment](https://arxiv.org/abs/2505.21592)
+
+**Authors:**
+Ze Chen, Shaode Yu
+
+**Abstract:**
+Kolmogorov-Arnold Network (KAN) has attracted growing interest for its strong function approximation capability. In our previous work, KAN and its variants were explored in score regression for blind image quality assessment (BIQA). However, these models encounter challenges when processing high-dimensional features, leading to limited performance gains and increased computational cost. To address these issues, we propose TaylorKAN that leverages the Taylor expansions as learnable activation functions to enhance local approximation capability. To improve the computational efficiency, network depth reduction and feature dimensionality compression are integrated into the TaylorKAN-based score regression pipeline. On five databases (BID, CLIVE, KonIQ, SPAQ, and FLIVE) with authentic distortions, extensive experiments demonstrate that TaylorKAN consistently outperforms the other KAN-related models, indicating that the local approximation via Taylor expansions is more effective than global approximation using orthogonal functions. Its generalization capacity is validated through inter-database experiments. The findings highlight the potential of TaylorKAN as an efficient and robust model for high-dimensional score regression.
+       
+
+
+### [Localized Weather Prediction Using Kolmogorov-Arnold Network-Based Models and Deep RNNs](https://arxiv.org/abs/2505.22686)
+
+**Authors:**
+Ange-Clement Akazan, Verlon Roel Mbingui, Gnankan Landry Regis N'guessan, Issa Karambal
+
+**Abstract:**
+Weather forecasting is crucial for managing risks and economic planning, particularly in tropical Africa, where extreme events severely impact livelihoods. Yet, existing forecasting methods often struggle with the region's complex, non-linear weather patterns. This study benchmarks deep recurrent neural networks such as $\texttt{LSTM, GRU, BiLSTM, BiGRU}$, and Kolmogorov-Arnold-based models $(\texttt{KAN} and \texttt{TKAN})$ for daily forecasting of temperature, precipitation, and pressure in two tropical cities: Abidjan, Cote d'Ivoire (Ivory Coast) and Kigali (Rwanda). We further introduce two customized variants of $ \texttt{TKAN}$ that replace its original $\texttt{SiLU}$ activation function with $ \texttt{GeLU}$ and \texttt{MiSH}, respectively. Using station-level meteorological data spanning from 2010 to 2024, we evaluate all the models on standard regression metrics. $\texttt{KAN}$ achieves temperature prediction ($R^2=0.9986$ in Abidjan, $0.9998$ in Kigali, $\texttt{MSE} < 0.0014~^\circ C ^2$), while $\texttt{TKAN}$ variants minimize absolute errors for precipitation forecasting in low-rainfall regimes. The customized $\texttt{TKAN}$ models demonstrate improvements over the standard $\texttt{TKAN}$ across both datasets. Classical \texttt{RNNs} remain highly competitive for atmospheric pressure ($R^2 \approx 0.83{-}0.86$), outperforming $\texttt{KAN}$-based models in this task. These results highlight the potential of spline-based neural architectures for efficient and data-efficient forecasting.
+       
+
+
+### [Automated Modeling Method for Pathloss Model Discovery](https://arxiv.org/abs/2505.23383)
+
+**Authors:**
+Ahmad Anaqreh, Shih-Kai Chou, Mihael Mohorčič, Carolina Fortuna
+
+**Abstract:**
+Modeling propagation is the cornerstone for designing and optimizing next-generation wireless systems, with a particular emphasis on 5G and beyond era. Traditional modeling methods have long relied on statistic-based techniques to characterize propagation behavior across different environments. With the expansion of wireless communication systems, there is a growing demand for methods that guarantee the accuracy and interoperability of modeling. Artificial intelligence (AI)-based techniques, in particular, are increasingly being adopted to overcome this challenge, although the interpretability is not assured with most of these methods. Inspired by recent advancements in AI, this paper proposes a novel approach that accelerates the discovery of path loss models while maintaining interpretability. The proposed method automates the model formulation, evaluation, and refinement, facilitating model discovery. We evaluate two techniques: one based on Deep Symbolic Regression, offering full interpretability, and the second based on Kolmogorov-Arnold Networks, providing two levels of interpretability. Both approaches are evaluated on two synthetic and two real-world datasets. Our results show that Kolmogorov-Arnold Networks achieve R^2 values close to 1 with minimal prediction error, while Deep Symbolic Regression generates compact models with moderate accuracy. Moreover, on the selected examples, we demonstrate that automated methods outperform traditional methods, achieving up to 75% reduction in prediction errors, offering accurate and explainable solutions with potential to increase the efficiency of discovering next-generation path loss models.
+       
+
+
+### [SPPSFormer: High-quality Superpoint-based Transformer for Roof Plane Instance Segmentation from Point Clouds](https://arxiv.org/abs/2505.24475)
+
+**Authors:**
+Cheng Zeng, Xiatian Qi, Chi Chen, Kai Sun, Wangle Zhang, Yuxuan Liu, Yan Meng, Bisheng Yang
+
+**Abstract:**
+Transformers have been seldom employed in point cloud roof plane instance segmentation, which is the focus of this study, and existing superpoint Transformers suffer from limited performance due to the use of low-quality superpoints. To address this challenge, we establish two criteria that high-quality superpoints for Transformers should satisfy and introduce a corresponding two-stage superpoint generation process. The superpoints generated by our method not only have accurate boundaries, but also exhibit consistent geometric sizes and shapes, both of which greatly benefit the feature learning of superpoint Transformers. To compensate for the limitations of deep learning features when the training set size is limited, we incorporate multidimensional handcrafted features into the model. Additionally, we design a decoder that combines a Kolmogorov-Arnold Network with a Transformer module to improve instance prediction and mask extraction. Finally, our network's predictions are refined using traditional algorithm-based postprocessing. For evaluation, we annotated a real-world dataset and corrected annotation errors in the existing RoofN3D dataset. Experimental results show that our method achieves state-of-the-art performance on our dataset, as well as both the original and reannotated RoofN3D datasets. Moreover, our model is not sensitive to plane boundary annotations during training, significantly reducing the annotation burden. Through comprehensive experiments, we also identified key factors influencing roof plane segmentation performance: in addition to roof types, variations in point cloud density, density uniformity, and 3D point precision have a considerable impact. These findings underscore the importance of incorporating data augmentation strategies that account for point cloud quality to enhance model robustness under diverse and challenging conditions.
+       
+
+
+### [How can AI reduce fall injuries in the workplace?](https://arxiv.org/abs/2505.24507)
+
+**Authors:**
+Nicholas Cartocci, Antonios E. Gkikakis, Roberto F. Pitzalis, Fabio Pera, Maria Teresa Settino, Darwin G. Caldwell, Jesús Ortiz
+
+**Abstract:**
+Fall-caused injuries are common in all types of work environments, including offices. They are the main cause of absences longer than three days, especially for small and medium-sized businesses (SMEs). However, data, data amount, data heterogeneity, and stringent processing time constraints continue to pose challenges to real-time fall detection. This work proposes a new approach based on a recurrent neural network (RNN) for Fall Detection and a Kolmogorov-Arnold Network (KAN) to estimate the time of impact of the fall. The approach is tested on SisFall, a dataset consisting of 2706 Activities of Daily Living (ADLs) and 1798 falls recorded by three sensors. The results show that the proposed approach achieves an average TPR of 82.6% and TNR of 98.4% for fall sequences and 94.4% in ADL. Besides, the Root Mean Squared Error of the estimated time of impact is approximately 160ms.
        
 
 
